@@ -1,0 +1,500 @@
+/* line 1, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, .report-detail h2, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 12, ../sass/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 20, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, ../sass/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 35, ../sass/_reset.scss */
+em {
+  font-style: italic;
+}
+
+/* line 39, ../sass/_reset.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 44, ../sass/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 50, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Base styles */
+/* line 6, ../sass/style.scss */
+html {
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 13, ../sass/style.scss */
+body {
+  background: white;
+  color: #938069;
+  line-height: 1.3em;
+}
+
+/* line 19, ../sass/style.scss */
+a {
+  color: #938069;
+  text-decoration: none;
+}
+
+/* line 24, ../sass/style.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 26, ../sass/style.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 32, ../sass/style.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* Classes */
+/* line 39, ../sass/style.scss */
+.wrapper-inner {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/**
+ * Region top
+ */
+/* line 48, ../sass/style.scss */
+#region-top {
+  background: #604e38;
+  min-height: 45px;
+}
+
+/* line 53, ../sass/style.scss */
+#block-search {
+  float: left;
+  margin: 0 0 0 65px;
+  position: relative;
+  width: 33%;
+}
+/* line 59, ../sass/style.scss */
+#block-search .search-form {
+  margin: 11px 0 0 0;
+}
+/* line 62, ../sass/style.scss */
+#block-search .search-form input.text {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 0;
+  float: left;
+  font-size: 0.750em;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 5px 0 5px;
+  width: 190px;
+}
+/* line 72, ../sass/style.scss */
+#block-search .search-form input.searchbtn {
+  background: url("../images/icon-search.png") no-repeat 50% 50% white;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  float: left;
+  font-size: 0;
+  height: 22px;
+  line-height: 22px;
+  text-indent: -5000px;
+  width: 22px;
+}
+
+/* line 88, ../sass/style.scss */
+#block-sociallinks {
+  color: #fff;
+  float: right;
+  font-size: 0.750em;
+  line-height: 22px;
+  margin: 11px 0 0 0;
+  width: 33%;
+}
+/* line 96, ../sass/style.scss */
+#block-sociallinks a {
+  color: #fff;
+}
+
+/**
+ * Region header
+ */
+/* line 105, ../sass/style.scss */
+#logo {
+  float: left;
+  margin: 11px 0 23px 95px;
+}
+
+/* line 110, ../sass/style.scss */
+#menu-mainmenu {
+  float: left;
+  font-size: 0.938em;
+  line-height: 30px;
+  margin: 46px 0 0 42px;
+  text-transform: uppercase;
+}
+/* line 117, ../sass/style.scss */
+#menu-mainmenu li {
+  float: left;
+  padding: 0 13px;
+}
+/* line 121, ../sass/style.scss */
+#menu-mainmenu li a {
+  color: #775e41;
+}
+/* line 124, ../sass/style.scss */
+#menu-mainmenu li a.active {
+  color: #fb8944;
+}
+
+/**
+ * Region footer
+ */
+/* line 135, ../sass/style.scss */
+#region-footer {
+  border-top: 1px solid #ac9f8c;
+  background: #cdc0af;
+  line-height: 30px;
+  min-height: 53px;
+}
+/* line 141, ../sass/style.scss */
+#region-footer ul {
+  margin: 12px 0 0 0;
+}
+/* line 143, ../sass/style.scss */
+#region-footer ul li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+/* line 150, ../sass/style.scss */
+#footer-block {
+  display: none;
+}
+
+/* line 154, ../sass/style.scss */
+#footer-block + img {
+  display: none;
+}
+
+/**
+ * Region filter
+ */
+/* line 162, ../sass/style.scss */
+#region-filter {
+  border-top: 5px solid #ac9f8c;
+  background: #cdc0af;
+  min-height: 53px;
+}
+
+/* line 168, ../sass/style.scss */
+#category_switch {
+  font-size: 0.875em;
+  line-height: 30px;
+  padding: 11px 0 11px 125px;
+}
+/* line 173, ../sass/style.scss */
+#category_switch li {
+  float: left;
+  padding: 0 16px;
+}
+/* line 177, ../sass/style.scss */
+#category_switch li a {
+  color: #fff;
+}
+/* line 180, ../sass/style.scss */
+#category_switch li a.active {
+  color: #604e38;
+  font-weight: bold;
+}
+
+/**
+ * Map region
+ */
+/* line 195, ../sass/style.scss */
+div.map {
+  border: 0;
+  height: 350px;
+  width: 100%;
+}
+
+/* line 201, ../sass/style.scss */
+.map-pager {
+  background: #2d2b29;
+  height: 42px;
+  line-height: 42px;
+}
+
+/* line 207, ../sass/style.scss */
+#trigger-expand-map {
+  display: none;
+}
+
+/* line 211, ../sass/style.scss */
+.trigger-maplist {
+  float: left;
+}
+
+/* line 215, ../sass/style.scss */
+.trigger-collapse {
+  float: right;
+}
+
+/* line 219, ../sass/style.scss */
+.collapsible-views {
+  overflow: hidden;
+}
+
+/* line 223, ../sass/style.scss */
+.collapsible-list {
+  display: none;
+  background: #938069;
+  height: 350px;
+}
+/* line 228, ../sass/style.scss */
+.collapsible-list .list-view {
+  padding: 14px 0 0 0;
+}
+/* line 231, ../sass/style.scss */
+.collapsible-list .rb_report {
+  background: #e7e1d3;
+  float: left;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(8, 9, 7, 0.5);
+  margin: 0 12px 12px 0;
+  height: 130px;
+  padding: 10px 15px;
+  overflow: hidden;
+  width: 260px;
+}
+/* line 243, ../sass/style.scss */
+.collapsible-list .rb_report h3 {
+  color: #7ba054;
+  font-weight: bold;
+  margin: 0 0 0.75em;
+}
+/* line 248, ../sass/style.scss */
+.collapsible-list .rb_report .r_date, .collapsible-list .rb_report .r_location {
+  display: none;
+}
+/* line 251, ../sass/style.scss */
+.collapsible-list .rb_report .btn-show {
+  color: #7ba054;
+  font-size: 0.875em;
+}
+
+/**
+ * Content region
+ */
+/* line 264, ../sass/style.scss */
+.region-content .wrapper-inner .content-padding {
+  background: #e7e1d3;
+  padding: 20px 45px;
+}
+
+/**
+ * Report detail
+ */
+/* line 275, ../sass/style.scss */
+h1, .report-detail h2 {
+  color: #7ba054;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+/* line 282, ../sass/style.scss */
+.report-detail .report-category-list, .report-detail .report-metadata, .report-detail .report-description-text {
+  margin: 0 0 1em 0;
+}
+
+/* line 290, ../sass/style.scss */
+.report-metadata {
+  font-weight: bold;
+}
+
+/* line 294, ../sass/style.scss */
+.report-comments {
+  margin: 2em 0;
+}
+/* line 296, ../sass/style.scss */
+.report-comments h2 {
+  margin-bottom: 0.375em;
+}
+
+/* line 301, ../sass/style.scss */
+.report-comment-box {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #d5cebe;
+  background: #f3f0e9;
+  margin: 0 0 6px 12px;
+  padding: 8px 9px;
+}
+
+/* line 309, ../sass/style.scss */
+.comment-metadata {
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+/* line 314, ../sass/style.scss */
+.comment-description {
+  margin: 0.5em 0 0.5em;
+}
+
+/* line 321, ../sass/style.scss */
+#commentForm {
+  font-size: 0.875em;
+  margin: 1em 0 0 0;
+}
+/* line 325, ../sass/style.scss */
+#commentForm label {
+  color: #7ba054;
+  display: block;
+  font-weight: bold;
+}
+
+/* line 332, ../sass/style.scss */
+.report_row {
+  margin: 0 0 1em 0;
+}
+
+/* line 336, ../sass/style.scss */
+.error {
+  color: #ca1b17 !important;
+  font-weight: normal !important;
+}
+
+/**
+ * Submit incident
+ */
+/* line 345, ../sass/style.scss */
+#reportForm {
+  font-size: 0.875em;
+  margin: 1em 0 0 0;
+}
+/* line 349, ../sass/style.scss */
+#reportForm label {
+  color: #7ba054;
+  display: block;
+  font-weight: bold;
+}
+/* line 354, ../sass/style.scss */
+#reportForm .allowed-html {
+  display: block;
+  line-height: 1.3em;
+  font-size: 0.750em;
+  margin-bottom: 3px;
+}
+
+/**
+ * user interface
+ */
+/* line 366, ../sass/style.scss */
+.edit-link {
+  font-size: 0.675em;
+}
+
+/**
+ * Form generation
+ */
+/* line 374, ../sass/style.scss */
+.textarea, .text {
+  border: 1px solid #f4f1ea;
+  padding: 0 5px;
+  height: 23px;
+  line-height: 23px;
+  width: 400px;
+}
+
+/* line 382, ../sass/style.scss */
+.textarea {
+  height: 100px;
+}
+
+/* line 386, ../sass/style.scss */
+.btn_green, .btn_submit {
+  background: #7ba054;
+  border: 0;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+/* line 395, ../sass/style.scss */
+.btn_green:hover, .btn_submit:hover {
+  background: #94b572;
+}
+
+/*@ sourceMappingURL=style.css.map */
