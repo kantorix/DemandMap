@@ -5,7 +5,7 @@
    </div>
   <!-- / map -->
   <div class="collapsible-list">
-    <div class="wrapper-inner">
+    <div class="wrapper-inner-list">
       <div class="list-view">
       <?php
       $reportController = new Reports_Controller();

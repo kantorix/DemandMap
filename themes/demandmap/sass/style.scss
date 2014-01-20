@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .clearfix {
   zoom: 1;
   &:before, &:after {
@@ -39,6 +43,11 @@ a {
 .wrapper-inner {
   margin: 0 auto;
   max-width: 960px;
+}
+
+.wrapper-inner-list {
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 /**
@@ -235,10 +244,11 @@ div.map {
     @include box-shadow(0 0 8px rgba(0, 0, 0, .5));
     border: 2px solid rgba(8, 9, 7, .5);
     margin: 0 12px 12px 0;
-    height: 130px;
-    padding: 10px 15px;
+    height: 110px;
+    padding: 20px 15px;
     overflow: hidden;
-    width: 260px;
+    position: relative;
+    width: 332px;
 
     h3 {
       color: $headlineColor;
@@ -251,6 +261,12 @@ div.map {
     .btn-show {
       color: $headlineColor;
       font-size: 0.875em;
+      white-space: nowrap;
+    }
+    .report-submissiontype {
+      bottom: 0;
+      right: 14px;
+      position: absolute;
     }
   }
 }

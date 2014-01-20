@@ -60,6 +60,20 @@
 							}
 						}
 					}
+          // person phone icon
+          $submissionType = 'desktop';
+          $submissionTypeIcon = '';
+          if (!empty($incident->person_phone)) {
+            $submissionType = 'mobile';
+          }
+          switch ($submissionType) {
+            case 'mobile':
+              $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-mobile.png" alt="">';
+              break;
+            default:
+              $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-desktop.png" alt="">';
+              break;
+          }
 				?>
 				<div id="incident_<?php echo $incident_id ?>" class="rb_report <?php echo $incident_verified_class; ?>">
 						<h3><a class="r_title" href="<?php echo $incident_url; ?>">
@@ -78,6 +92,7 @@
 						// Action::report_extra_details - Add items to the report list details section
 						Event::run('ushahidi_action.report_extra_details', $incident_id);
 						?>
+            <span class="report-submissiontype"><?php print $submissionTypeIcon; ?></span>
 					</div>
 			<?php } ?>
 			</div>
