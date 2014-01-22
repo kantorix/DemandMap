@@ -225,3 +225,8 @@
  </div>
   <!-- end content-bg -->
 </div>
+<?php
+$pageController = new Page_Controller();
+$pageController->index(7);
+print $pageController->template->content;
+?>

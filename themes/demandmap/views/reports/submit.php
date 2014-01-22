@@ -61,7 +61,6 @@
           <div class="report_row">
             <label for="incident_description"><?php echo Kohana::lang('ui_main.reports_description'); ?>
               <span class="required">*</span></label>
-            <span class="allowed-html"><?php echo html::allowed_html(); ?></span>
             <?php print form::textarea('incident_description', $form['incident_description'], ' rows="10" class="textarea long" ') ?>
           </div>
           <div class="report_row" id="datetime_default">

@@ -27,7 +27,7 @@
 					// Trim to 150 characters without cutting words
 					// XXX: Perhaps delcare 150 as constant
 
-					$incident_description = text::limit_chars(html::strip_tags($incident_description), 80, "...", true);
+					$incident_description = text::limit_chars(html::strip_tags($incident_description), 110, "...", true);
 					$incident_date = date('H:i M d, Y', strtotime($incident->incident_date));
 					//$incident_time = date('H:i', strtotime($incident->incident_date));
 					$location_id = $incident->location_id;
@@ -61,10 +61,13 @@
 						}
 					}
           // person phone icon
-          $submissionType = 'desktop';
           $submissionTypeIcon = '';
-          if (!empty($incident->person_phone)) {
-            $submissionType = 'mobile';
+          $submissionType = 'desktop';
+          $persons = ORM::Factory('incident_person')->where('incident_id', $incident_id)->find_all();
+          foreach ($persons as $person) {
+            if (!empty($person->person_phone)) {
+              $submissionType = 'mobile';
+            }
           }
           switch ($submissionType) {
             case 'mobile':

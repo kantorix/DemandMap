@@ -516,4 +516,30 @@ h1, .report-detail h2 {
   background: #94b572;
 }
 
+/**
+ * Table list
+ */
+/* line 420, ../sass/style.scss */
+.table-list {
+  background: #fff;
+  border-left: 1px solid #ac9f8c;
+  border-top: 1px solid #ac9f8c;
+}
+/* line 425, ../sass/style.scss */
+.table-list tr.odd {
+  background: #e9e9e9;
+}
+/* line 428, ../sass/style.scss */
+.table-list th, .table-list td {
+  border-right: 1px solid #ac9f8c;
+  border-bottom: 1px solid #ac9f8c;
+  padding: 3px 8px;
+}
+/* line 433, ../sass/style.scss */
+.table-list th {
+  background: #2d2b29;
+  color: #fff;
+  font-weight: bold;
+}
+
 /*@ sourceMappingURL=style.css.map */
