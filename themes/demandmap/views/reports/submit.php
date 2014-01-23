@@ -154,47 +154,7 @@
           </div>
         <?php endif; ?>
         <div class="report_row">
-          <div id="divMap" class="report_map">
-            <div id="geometryLabelerHolder" class="olControlNoSelect">
-              <div id="geometryLabeler">
-                <div id="geometryLabelComment">
-									<span id="geometryLabel">
-										<label><?php echo Kohana::lang('ui_main.geometry_label'); ?>
-                      :</label>
-                    <?php print form::input('geometry_label', '', ' class="lbl_text"'); ?>
-									</span>
-									<span id="geometryComment">
-										<label><?php echo Kohana::lang('ui_main.geometry_comments'); ?>
-                      :</label>
-                    <?php print form::input('geometry_comment', '', ' class="lbl_text2"'); ?>
-									</span>
-                </div>
-                <div>
-									<span id="geometryColor">
-										<label><?php echo Kohana::lang('ui_main.geometry_color'); ?>
-                      :</label>
-                    <?php print form::input('geometry_color', '', ' class="lbl_text"'); ?>
-									</span>
-									<span id="geometryStrokewidth">
-										<label><?php echo Kohana::lang('ui_main.geometry_strokewidth'); ?>
-                      :</label>
-                    <?php print form::dropdown('geometry_strokewidth', $stroke_width_array, ''); ?>
-									</span>
-									<span id="geometryLat">
-										<label><?php echo Kohana::lang('ui_main.latitude'); ?>
-                      :</label>
-                    <?php print form::input('geometry_lat', '', ' class="lbl_text"'); ?>
-									</span>
-									<span id="geometryLon">
-										<label><?php echo Kohana::lang('ui_main.longitude'); ?>
-                      :</label>
-                    <?php print form::input('geometry_lon', '', ' class="lbl_text"'); ?>
-									</span>
-                </div>
-              </div>
-              <div id="geometryLabelerClose"></div>
-            </div>
-          </div>
+          <div id="submitMap" class="report_map"></div>
         </div>
         <?php Event::run('ushahidi_action.report_form_location', $id); ?>
         <div class="report_row">
