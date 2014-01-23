@@ -4,4 +4,4 @@ Version: 1.0
 Author: HTW Berlin
 
 CSS: style
-JS: script
+JS: leaflet,leaflet.markercluster,KML,script
