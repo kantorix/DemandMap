@@ -1,5 +1,8 @@
 @import "reset";
 @import "init";
+@import "leaflet";
+@import "markercluster";
+@import "markercluster.default";
 
 /* Base styles */
 
@@ -113,14 +116,14 @@ a:hover {
 
 #logo {
   float: left;
-  margin: 11px 0 23px 95px;
+  margin: 5px 0 10px 60px;
 }
 
 #menu-mainmenu {
   float: left;
   font-size: 0.938em;
   line-height: 30px;
-  margin: 46px 0 0 42px;
+  margin: 76px 0 0 22px;
   text-transform: uppercase;
 
   li {

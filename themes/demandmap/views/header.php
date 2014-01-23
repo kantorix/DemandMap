@@ -77,37 +77,6 @@ elseif (count($uri_segments) >= 2) {
 Event::run('ushahidi_action.header_item');
 ?>
 <?php
-// Map and Slider Blocks
-// Map Settings
-$marker_radius = Kohana::config('map.marker_radius');
-$marker_opacity = Kohana::config('map.marker_opacity');
-$marker_stroke_width = Kohana::config('map.marker_stroke_width');
-$marker_stroke_opacity = Kohana::config('map.marker_stroke_opacity');
-
-$map_js = new View('main/main_js');
-
-$map_js->marker_radius = ($marker_radius >=1 AND $marker_radius <= 10 )
-  ? $marker_radius
-  : 5;
-
-$map_js->marker_opacity = ($marker_opacity >=1 AND $marker_opacity <= 10 )
-  ? $marker_opacity * 0.1
-  : 0.9;
-
-$map_js->marker_stroke_width = ($marker_stroke_width >=1 AND $marker_stroke_width <= 5)
-  ? $marker_stroke_width
-  : 2;
-
-$map_js->marker_stroke_opacity = ($marker_stroke_opacity >=1 AND $marker_stroke_opacity <= 10)
-  ? $marker_stroke_opacity * 0.1
-  : 0.9;
-
-
-$map_js->active_startDate = $display_startDate;
-$map_js->active_endDate = $display_endDate;
-
-$map_js->blocks_per_row = Kohana::config('settings.blocks_per_row');
-
 $div_map = new View('main/map');
 print $div_map;
 ?>

@@ -79,6 +79,19 @@
 </div>
 <!-- / category filters -->
 
+<?php
+$pageController = new Page_Controller();
+$pageController->index(5);
+print $pageController->template->content;
+
+$pageController->index(6);
+print $pageController->template->content;
+?>
+<?php
+$reportsController = new Reports_Controller();
+$reportsController->submit();
+print $reportsController->template->content;
+?>
 <!-- content -->
 <div class="region-content">
   <div class="wrapper-inner">
@@ -94,16 +107,3 @@
   </div>
 </div>
 <!-- content -->
-<?php
-$pageController = new Page_Controller();
-$pageController->index(5);
-print $pageController->template->content;
-
-$pageController->index(6);
-print $pageController->template->content;
-?>
-<?php
-$reportsController = new Reports_Controller();
-$reportsController->submit();
-print $reportsController->template->content;
-?>
