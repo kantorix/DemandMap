@@ -1,0 +1,441 @@
+@import "reset";
+@import "init";
+@import "leaflet";
+@import "markercluster";
+@import "markercluster.default";
+
+/* Base styles */
+
+html {
+  font-family: $helvetica;
+  font-size: 100% * ($base-font-size / 16px);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $bgColor;
+  color: $textColor;
+  line-height: 1.3em;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* Classes */
+
+.wrapper-inner {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.wrapper-inner-list {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/**
+ * Region top
+ */
+
+#region-top {
+  background: #604e38;
+  min-height: 45px;
+}
+
+#block-search {
+  float: left;
+  margin: 0 0 0 65px;
+  position: relative;
+  width: 33%;
+
+  .search-form {
+    margin: 11px 0 0 0;
+
+    input.text {
+      @include border-left-radius(5px);
+      border: 0;
+      float: left;
+      font-size: 0.750em;
+      height: 22px;
+      line-height: 22px;
+      padding: 0 5px 0 5px;
+      width: 190px;
+    }
+    input.searchbtn {
+      background: url("../images/icon-search.png") no-repeat 50% 50% #fff;
+      @include border-right-radius(5px);
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      float: left;
+      font-size: 0;
+      height: 22px;
+      line-height: 22px;
+      text-indent: -5000px;
+      width: 22px;
+    }
+  }
+}
+
+#block-sociallinks {
+  color: #fff;
+  float: right;
+  font-size: 0.750em;
+  line-height: 22px;
+  margin: 11px 0 0 0;
+  width: 33%;
+
+  a {
+    color: #fff;
+  }
+}
+
+/**
+ * Region header
+ */
+
+#logo {
+  float: left;
+  margin: 5px 0 10px 60px;
+}
+
+#menu-mainmenu {
+  float: left;
+  font-size: 0.938em;
+  line-height: 30px;
+  margin: 76px 0 0 22px;
+  text-transform: uppercase;
+
+  li {
+    float: left;
+    padding: 0 13px;
+
+    a {
+      color: #775e41;
+
+      &.active {
+        color: #fb8944;
+      }
+    }
+  }
+}
+
+/**
+ * Region footer
+ */
+
+#region-footer {
+  border-top: 1px solid #ac9f8c;
+  background: #cdc0af;
+  line-height: 30px;
+  min-height: 53px;
+
+  ul {
+    margin: 12px 0 0 0;
+    li {
+      display: inline;
+      margin: 0 0.5em;
+    }
+  }
+}
+
+#footer-block {
+  display: none;
+}
+
+#footer-block + img {
+  display: none;
+}
+
+/**
+ * Region filter
+ */
+
+#region-filter {
+  border-top: 5px solid #ac9f8c;
+  background: #cdc0af;
+  min-height: 53px;
+}
+
+#category_switch {
+  font-size: 0.875em;
+  line-height: 30px;
+  padding: 11px 0 11px 125px;
+
+  li {
+    float: left;
+    padding: 0 16px;
+
+    a {
+      color: #fff;
+
+      &.active {
+        color: #604e38;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/**
+ * Map region
+ */
+
+#region-map {
+}
+
+div.map {
+  border: 0;
+  height: 350px;
+  width: 100%;
+}
+
+.map-pager {
+  background: #2d2b29;
+  height: 42px;
+  line-height: 42px;
+}
+
+#trigger-expand-map {
+  display: none;
+}
+
+.trigger-maplist {
+  float: left;
+}
+
+.trigger-collapse {
+  float: right;
+}
+
+.collapsible-views {
+  overflow: hidden;
+}
+
+.collapsible-list {
+  display: none;
+  background: #938069;
+  height: 350px;
+
+  .list-view {
+    padding: 14px 0 0 0;
+  }
+  .rb_report {
+    background: #e7e1d3;
+    float: left;
+    @include border-radius(30px);
+    @include box-shadow(0 0 8px rgba(0, 0, 0, .5));
+    border: 2px solid rgba(8, 9, 7, .5);
+    margin: 0 12px 12px 0;
+    height: 110px;
+    padding: 20px 15px;
+    overflow: hidden;
+    position: relative;
+    width: 332px;
+
+    h3 {
+      color: $headlineColor;
+      font-weight: bold;
+      margin: 0 0 0.75em;
+    }
+    .r_date, .r_location {
+      display: none;
+    }
+    .btn-show {
+      color: $headlineColor;
+      font-size: 0.875em;
+      white-space: nowrap;
+    }
+    .report-submissiontype {
+      bottom: 0;
+      right: 14px;
+      position: absolute;
+    }
+  }
+}
+
+/**
+ * Content region
+ */
+
+.region-content {
+  .wrapper-inner {
+    .content-padding {
+      background: #e7e1d3;
+      padding: 20px 45px;
+    }
+  }
+}
+
+/**
+ * Report detail
+ */
+
+h1 {
+  color: $headlineColor;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.report-detail {
+  .report-category-list, .report-metadata, .report-description-text {
+    margin: 0 0 1em 0;
+  }
+  h2 {
+    @extend h1;
+  }
+}
+
+.report-metadata {
+  font-weight: bold;
+}
+
+.report-comments {
+  margin: 2em 0;
+  h2 {
+    margin-bottom: 0.375em;
+  }
+}
+
+.report-comment-box {
+  @include border-radius(3px);
+  border: 1px solid #d5cebe;
+  background: #f3f0e9;
+  margin: 0 0 6px 12px;
+  padding: 8px 9px;
+}
+
+.comment-metadata {
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.comment-description {
+  margin: 0.5em 0 0.5em;
+}
+
+.comment-block {
+}
+
+#commentForm {
+  font-size: 0.875em;
+  margin: 1em 0 0 0;
+
+  label {
+    color: $headlineColor;
+    display: block;
+    font-weight: bold;
+  }
+}
+
+.report_row {
+  margin: 0 0 1em 0;
+}
+
+.error {
+  color: #ca1b17 !important;
+  font-weight: normal !important;
+}
+
+/**
+ * Submit incident
+ */
+
+#reportForm {
+  font-size: 0.875em;
+  margin: 1em 0 0 0;
+
+  label {
+    color: $headlineColor;
+    display: block;
+    font-weight: bold;
+  }
+  .allowed-html {
+    display: block;
+    line-height: 1.3em;
+    font-size: 0.750em;
+    margin-bottom: 3px;
+  }
+}
+
+/**
+ * user interface
+ */
+
+.edit-link {
+  font-size: 0.675em;
+}
+
+/**
+ * Form generation
+ */
+
+.textarea, .text {
+  border: 1px solid #f4f1ea;
+  padding: 0 5px;
+  height: 23px;
+  line-height: 23px;
+  width: 400px;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.btn_green, .btn_submit {
+  background: $headlineColor;
+  border: 0;
+  cursor: pointer;
+  @include border-radius(5px);
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+
+  &:hover {
+    background: lighten($headlineColor, 10%);
+  }
+}
+
+/**
+ * Table list
+ */
+
+.table-list {
+  background: #fff;
+  border-left: 1px solid #ac9f8c;
+  border-top: 1px solid #ac9f8c;
+
+  tr.odd {
+    background: #e9e9e9;
+  }
+  th, td {
+    border-right: 1px solid #ac9f8c;
+    border-bottom: 1px solid #ac9f8c;
+    padding: 3px 8px;
+  }
+  th {
+    background: #2d2b29;
+    color: #fff;
+    font-weight: bold;
+  }
+}
