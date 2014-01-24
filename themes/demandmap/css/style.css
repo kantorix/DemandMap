@@ -871,7 +871,7 @@ a:hover {
 }
 /* line 84, ../sass/style.scss */
 #block-search .search-form input.searchbtn {
-  background: url("../images/icon-search.png") no-repeat 50% 50% white;
+  background: url("/themes/demandmap/images/icon-search.png") no-repeat 50% 50% white;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
