@@ -37,4 +37,15 @@ $(function () {
     key: 'ad132e106cd246ec961bbdfbe0228fe8',
     styleID: '100249'
   });
+  var styles = [
+    {
+      featureType: 'all',
+      stylers: [{ saturation: -2, lightness: 8, gamma:1.95, weight:1.0 }]
+    }
+  ];
+  googleLayer = new L.Google('ROADMAP', {
+    mapOptions: {
+      styles: styles
+    }
+  });
 });

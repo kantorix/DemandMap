@@ -4,8 +4,9 @@
       zoom: 6,
       scrollWheelZoom: false,
       //layers: [track, baseLayer]
-      layers: [baseLayer]
+      layers: [googleLayer]
     });
+
 
     var markers = L.markerClusterGroup();
     $.ajax({
