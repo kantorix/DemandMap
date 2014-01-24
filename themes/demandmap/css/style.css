@@ -1262,4 +1262,34 @@ h1, .report-detail h2 {
   font-weight: bold;
 }
 
+/**
+ * Frontpage Buttons
+ */
+/* line 447, ../sass/style.scss */
+.frontpage-button {
+  border-bottom: 1px solid #d0cabc;
+  float: left;
+  font-size: 0.875em;
+  padding: 0 0 35px 0;
+  text-align: center;
+  width: 33.33333%;
+}
+/* line 455, ../sass/style.scss */
+.frontpage-button h3 {
+  color: #948068;
+  font-size: 1.75em;
+  font-weight: normal;
+  margin: 30px 0 15px 0;
+  text-transform: uppercase;
+}
+/* line 462, ../sass/style.scss */
+.frontpage-button a:hover {
+  color: #7ba054;
+}
+
+/* line 467, ../sass/style.scss */
+.frontpage-buttons-inner {
+  padding: 0 20px;
+}
+
 /*@ sourceMappingURL=style.css.map */
