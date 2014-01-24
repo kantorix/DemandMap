@@ -36,4 +36,9 @@
       }
     });
     map.addLayer(markers);
+
+    /*var track = new L.KML("/themes/demandmap/kml/undp_states.kml", {async: true});
+    track.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });*/
+
+    map.addLayer(track);
   });
