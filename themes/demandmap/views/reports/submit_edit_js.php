@@ -8,7 +8,7 @@
       center: new L.LatLng(latitude, longitude),
       zoom: 6,
       scrollWheelZoom: false,
-      layers: [baseLayerSubmit]
+      layers: [googleLayerSubmit]
     });
     var marker = L.marker(new L.LatLng(latitude, longitude), { draggable: true, title: "New marker" });
     marker.on('dragend', function(event) {

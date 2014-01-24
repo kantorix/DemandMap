@@ -8,7 +8,21 @@
     });
 
 
-    var markers = L.markerClusterGroup();
+    var markers = L.markerClusterGroup({
+      maxClusterRadius: 40,
+      iconCreateFunction: function(cluster) {
+        var childCount = cluster.getChildCount();
+        var c = ' marker-cluster-';
+        if (childCount < 20) {
+          c += 'small';
+        } else if (childCount < 50) {
+          c += 'medium';
+        } else {
+          c += 'large';
+        }
+        return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+      }
+    });
     $.ajax({
       dataType: 'json',
       url: '/api?task=incidents',

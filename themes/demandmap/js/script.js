@@ -27,16 +27,6 @@ $(function () {
   });
 
   L.Icon.Default.imagePath = '/themes/demandmap/images/leaflet';
-  baseLayer = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleID}/256/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a> contributors',
-    key: 'ad132e106cd246ec961bbdfbe0228fe8',
-    styleID: '100249'
-  });
-  baseLayerSubmit = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleID}/256/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a> contributors',
-    key: 'ad132e106cd246ec961bbdfbe0228fe8',
-    styleID: '100249'
-  });
   var styles = [
     {
       featureType: 'all',
@@ -44,6 +34,11 @@ $(function () {
     }
   ];
   googleLayer = new L.Google('ROADMAP', {
+    mapOptions: {
+      styles: styles
+    }
+  });
+  googleLayerSubmit = new L.Google('ROADMAP', {
     mapOptions: {
       styles: styles
     }
