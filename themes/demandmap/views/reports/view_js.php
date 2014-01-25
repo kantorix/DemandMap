@@ -16,7 +16,7 @@ $(function () {
         });
         var map = new L.Map('map', {
           center: new L.LatLng(latitude, longitude),
-          zoom: 6,
+          zoom: 8,
           scrollWheelZoom: false,
           layers: [googleLayer]
         });
