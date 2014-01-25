@@ -288,13 +288,59 @@ div.map {
 }
 
 /**
+ * blocks
+ */
+
+.content-blocks {
+  #block-reports {
+    float: left;
+    width: 28%;
+
+    .content-block {
+      padding-right: 10px;
+    }
+  }
+  #block-news {
+    float: left;
+    width: 42%;
+
+    .content-block {
+      padding: 0 5px;
+    }
+  }
+  #block-social-media {
+    float: left;
+    width: 30%;
+
+    .content-block {
+      padding-left: 10px;
+    }
+  }
+}
+
+#block-reports {
+  .incident-identificator {
+    display: inline-block;
+    width: 25px;
+  }
+  .incident-separator {
+    margin-right: 5px;
+  }
+}
+
+.block-report-list, .block-news-list {
+  font-size: 0.750em;
+}
+
+/**
  * Report detail
  */
 
-h1 {
+h1, .content-blocks h5 {
   color: $headlineColor;
   font-size: 1.125em;
   font-weight: bold;
+  padding-bottom: 0.75em;
 }
 
 .report-detail {

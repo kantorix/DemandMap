@@ -1095,35 +1095,82 @@ div.map {
 }
 
 /**
+ * blocks
+ */
+/* line 295, ../sass/style.scss */
+.content-blocks #block-reports {
+  float: left;
+  width: 28%;
+}
+/* line 299, ../sass/style.scss */
+.content-blocks #block-reports .content-block {
+  padding-right: 10px;
+}
+/* line 303, ../sass/style.scss */
+.content-blocks #block-news {
+  float: left;
+  width: 42%;
+}
+/* line 307, ../sass/style.scss */
+.content-blocks #block-news .content-block {
+  padding: 0 5px;
+}
+/* line 311, ../sass/style.scss */
+.content-blocks #block-social-media {
+  float: left;
+  width: 30%;
+}
+/* line 315, ../sass/style.scss */
+.content-blocks #block-social-media .content-block {
+  padding-left: 10px;
+}
+
+/* line 322, ../sass/style.scss */
+#block-reports .incident-identificator {
+  display: inline-block;
+  width: 25px;
+}
+/* line 326, ../sass/style.scss */
+#block-reports .incident-separator {
+  margin-right: 5px;
+}
+
+/* line 331, ../sass/style.scss */
+.block-report-list, .block-news-list {
+  font-size: 0.750em;
+}
+
+/**
  * Report detail
  */
-/* line 294, ../sass/style.scss */
-h1, .report-detail h2 {
+/* line 339, ../sass/style.scss */
+h1, .report-detail h2, .content-blocks h5 {
   color: #7ba054;
   font-size: 1.125em;
   font-weight: bold;
+  padding-bottom: 0.75em;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .report-detail .report-category-list, .report-detail .report-metadata, .report-detail .report-description-text {
   margin: 0 0 1em 0;
 }
 
-/* line 309, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .report-metadata {
   font-weight: bold;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 .report-comments {
   margin: 2em 0;
 }
-/* line 315, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .report-comments h2 {
   margin-bottom: 0.375em;
 }
 
-/* line 320, ../sass/style.scss */
+/* line 366, ../sass/style.scss */
 .report-comment-box {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1136,35 +1183,35 @@ h1, .report-detail h2 {
   padding: 8px 9px;
 }
 
-/* line 328, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .comment-metadata {
   font-style: italic;
   font-size: 0.875em;
 }
 
-/* line 333, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 .comment-description {
   margin: 0.5em 0 0.5em;
 }
 
-/* line 340, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 #commentForm {
   font-size: 0.875em;
   margin: 1em 0 0 0;
 }
-/* line 344, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 #commentForm label {
   color: #7ba054;
   display: block;
   font-weight: bold;
 }
 
-/* line 351, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .report_row {
   margin: 0 0 1em 0;
 }
 
-/* line 355, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .error {
   color: #ca1b17 !important;
   font-weight: normal !important;
@@ -1173,18 +1220,18 @@ h1, .report-detail h2 {
 /**
  * Submit incident
  */
-/* line 364, ../sass/style.scss */
+/* line 410, ../sass/style.scss */
 #reportForm {
   font-size: 0.875em;
   margin: 1em 0 0 0;
 }
-/* line 368, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 #reportForm label {
   color: #7ba054;
   display: block;
   font-weight: bold;
 }
-/* line 373, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 #reportForm .allowed-html {
   display: block;
   line-height: 1.3em;
@@ -1195,7 +1242,7 @@ h1, .report-detail h2 {
 /**
  * user interface
  */
-/* line 385, ../sass/style.scss */
+/* line 431, ../sass/style.scss */
 .edit-link {
   font-size: 0.675em;
 }
@@ -1203,7 +1250,7 @@ h1, .report-detail h2 {
 /**
  * Form generation
  */
-/* line 393, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 .textarea, .text {
   border: 1px solid #f4f1ea;
   padding: 0 5px;
@@ -1212,12 +1259,12 @@ h1, .report-detail h2 {
   width: 400px;
 }
 
-/* line 401, ../sass/style.scss */
+/* line 447, ../sass/style.scss */
 .textarea {
   height: 100px;
 }
 
-/* line 405, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 .btn_green, .btn_submit {
   background: #7ba054;
   border: 0;
@@ -1231,7 +1278,7 @@ h1, .report-detail h2 {
   font-weight: bold;
   padding: 8px 16px;
 }
-/* line 414, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 .btn_green:hover, .btn_submit:hover {
   background: #94b572;
 }
@@ -1239,23 +1286,23 @@ h1, .report-detail h2 {
 /**
  * Table list
  */
-/* line 423, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 .table-list {
   background: #fff;
   border-left: 1px solid #ac9f8c;
   border-top: 1px solid #ac9f8c;
 }
-/* line 428, ../sass/style.scss */
+/* line 474, ../sass/style.scss */
 .table-list tr.odd {
   background: #e9e9e9;
 }
-/* line 431, ../sass/style.scss */
+/* line 477, ../sass/style.scss */
 .table-list th, .table-list td {
   border-right: 1px solid #ac9f8c;
   border-bottom: 1px solid #ac9f8c;
   padding: 3px 8px;
 }
-/* line 436, ../sass/style.scss */
+/* line 482, ../sass/style.scss */
 .table-list th {
   background: #2d2b29;
   color: #fff;
@@ -1265,7 +1312,7 @@ h1, .report-detail h2 {
 /**
  * Frontpage Buttons
  */
-/* line 447, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 .frontpage-button {
   border-bottom: 1px solid #d0cabc;
   float: left;
@@ -1274,7 +1321,7 @@ h1, .report-detail h2 {
   text-align: center;
   width: 33.33333%;
 }
-/* line 455, ../sass/style.scss */
+/* line 501, ../sass/style.scss */
 .frontpage-button h3 {
   color: #948068;
   font-size: 1.75em;
@@ -1282,12 +1329,12 @@ h1, .report-detail h2 {
   margin: 30px 0 15px 0;
   text-transform: uppercase;
 }
-/* line 462, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 .frontpage-button a:hover {
   color: #7ba054;
 }
 
-/* line 467, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .frontpage-buttons-inner {
   padding: 0 20px;
 }

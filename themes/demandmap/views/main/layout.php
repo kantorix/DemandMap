@@ -124,7 +124,7 @@ print $pageController->template->content;
   <div class="wrapper-inner">
     <div class="content-padding">
       <!-- content blocks -->
-      <div class="content-blocks clearingfix">
+      <div class="content-blocks clearfix">
         <ul class="content-column">
           <?php blocks::render(); ?>
         </ul>
