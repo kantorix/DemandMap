@@ -18,7 +18,7 @@ $(function () {
           center: new L.LatLng(latitude, longitude),
           zoom: 6,
           scrollWheelZoom: false,
-          layers: [baseLayer]
+          layers: [googleLayer]
         });
         map.addLayer(markers);
       }
