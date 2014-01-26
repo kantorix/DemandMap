@@ -584,19 +584,23 @@ table {
   text-align: left;
   border-radius: 12px;
 }
+/* line 459, ../sass/_leaflet.scss */
+.leaflet-popup-content-wrapper h3 {
+  font-size: 1.375em;
+}
 
-/* line 460, ../sass/_leaflet.scss */
+/* line 464, ../sass/_leaflet.scss */
 .leaflet-popup-content {
   margin: 13px 19px;
   line-height: 1.4;
 }
 
-/* line 465, ../sass/_leaflet.scss */
+/* line 469, ../sass/_leaflet.scss */
 .leaflet-popup-content p {
   margin: 18px 0;
 }
 
-/* line 469, ../sass/_leaflet.scss */
+/* line 473, ../sass/_leaflet.scss */
 .leaflet-popup-tip-container {
   margin: 0 auto;
   width: 40px;
@@ -605,7 +609,7 @@ table {
   overflow: hidden;
 }
 
-/* line 477, ../sass/_leaflet.scss */
+/* line 481, ../sass/_leaflet.scss */
 .leaflet-popup-tip {
   width: 17px;
   height: 17px;
@@ -618,14 +622,14 @@ table {
   transform: rotate(45deg);
 }
 
-/* line 491, ../sass/_leaflet.scss */
+/* line 495, ../sass/_leaflet.scss */
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: white;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* line 498, ../sass/_leaflet.scss */
+/* line 502, ../sass/_leaflet.scss */
 .leaflet-container a.leaflet-popup-close-button {
   position: absolute;
   top: 0;
@@ -641,24 +645,24 @@ table {
   background: transparent;
 }
 
-/* line 513, ../sass/_leaflet.scss */
+/* line 517, ../sass/_leaflet.scss */
 .leaflet-container a.leaflet-popup-close-button:hover {
   color: #999;
 }
 
-/* line 517, ../sass/_leaflet.scss */
+/* line 521, ../sass/_leaflet.scss */
 .leaflet-popup-scrolled {
   overflow: auto;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
 }
 
-/* line 523, ../sass/_leaflet.scss */
+/* line 527, ../sass/_leaflet.scss */
 .leaflet-oldie .leaflet-popup-content-wrapper {
   zoom: 1;
 }
 
-/* line 527, ../sass/_leaflet.scss */
+/* line 531, ../sass/_leaflet.scss */
 .leaflet-oldie .leaflet-popup-tip {
   width: 24px;
   margin: 0 auto;
@@ -666,12 +670,12 @@ table {
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
 }
 
-/* line 534, ../sass/_leaflet.scss */
+/* line 538, ../sass/_leaflet.scss */
 .leaflet-oldie .leaflet-popup-tip-container {
   margin-top: -1px;
 }
 
-/* line 538, ../sass/_leaflet.scss */
+/* line 542, ../sass/_leaflet.scss */
 .leaflet-oldie .leaflet-control-zoom,
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
@@ -680,7 +684,7 @@ table {
 }
 
 /* div icon */
-/* line 547, ../sass/_leaflet.scss */
+/* line 551, ../sass/_leaflet.scss */
 .leaflet-div-icon {
   background: #fff;
   border: 1px solid #666;
