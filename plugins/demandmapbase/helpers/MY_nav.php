@@ -42,17 +42,6 @@ class nav extends nav_Core {
       }
     }
 
-    // Contacts
-    if (!in_array('contact', $dontshow)) {
-      if (Kohana::config('settings.site_contact_page') AND Kohana::config('settings.site_email') != "") {
-        $menu_items[] = array(
-          'page' => 'contact',
-          'url' => url::site('contact'),
-          'name' => Kohana::lang('ui_main.contact_item')
-        );
-      }
-    }
-
     Event::run('ushahidi_filter.nav_main_tabs', $menu_items);
 
     foreach ($menu_items as $item) {

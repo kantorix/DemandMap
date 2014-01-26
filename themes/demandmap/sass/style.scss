@@ -1,5 +1,6 @@
 @import "reset";
 @import "init";
+@import "mixins";
 @import "leaflet";
 @import "markercluster";
 @import "markercluster.default";
@@ -145,16 +146,18 @@ a:hover {
  */
 
 #region-footer {
-  border-top: 1px solid #ac9f8c;
-  background: #cdc0af;
-  line-height: 30px;
-  min-height: 53px;
+  background: #46392b;
+  color: #ffffff;
+  min-height: 85px;
 
+  a {
+    color: #ffffff;
+  }
   ul {
-    margin: 12px 0 0 0;
+    padding: 22px 0 0 0;
     li {
       display: inline;
-      margin: 0 0.5em;
+      margin: 0 0.15em;
     }
   }
 }
@@ -168,6 +171,15 @@ a:hover {
 }
 
 /**
+ * Footer menu
+ */
+
+#footermenu {
+  font-size: 0.875em;
+  text-align: center;
+}
+
+/**
  * Region filter
  */
 
@@ -177,7 +189,7 @@ a:hover {
   min-height: 53px;
 }
 
-#category_switch {
+#type_switch {
   font-size: 0.875em;
   line-height: 30px;
   padding: 11px 0 11px 125px;
@@ -195,6 +207,82 @@ a:hover {
       }
     }
   }
+}
+
+/**
+ * Category filter
+ */
+
+#region-category-filter {
+  color: #fff;
+  margin: 36px 0 0 0;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  width: 288px;
+
+  a {
+    color: #fff;
+    &:hover, &.active {
+      color: lighten($headlineColor, 20%);
+      text-decoration: none;
+    }
+  }
+  h3 {
+    color: #fff !important;
+    font-size: 1.500em;
+    margin: 9px 0 17px 0;
+    text-transform: uppercase;
+  }
+  h4 {
+    color: #fff !important;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-style: italic;
+  }
+  h5 {
+    color: #fff !important;
+    font-size: 0.875em;
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+#category_switch {
+  ul {
+    font-size: 0.750em;
+    line-height: normal;
+    margin: 9px 0 9px 0;
+    list-style-type: none;
+
+    li {
+      padding: 2px 0 2px 0;
+    }
+  }
+}
+
+#region-category-filter-inner {
+  @include transparent(#000000, 0.80);
+  float: right;
+  overflow: hidden;
+  padding: 0 0 0 13px;
+  width: 0;
+}
+
+#region-category-filter-plus, #region-category-filter-minus {
+  @include transparent(#000000, 0.80);
+  float: right;
+  font-size: 0;
+  height: 39px;
+  width: 32px;
+
+  img {
+    margin: 7px 0 0 9px;
+  }
+}
+
+#region-category-filter-minus {
+  display: none;
 }
 
 /**

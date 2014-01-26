@@ -5,5 +5,7 @@ $lang = array(
   'recent_reports' => 'Recent reports',
   'recent_news' => 'Recent News',
   'social_media_block' => 'Social Media',
+  'about' => 'About',
+  'legal_notice' => 'Legal Notice',
 );
 ?>
