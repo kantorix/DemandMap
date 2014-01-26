@@ -1,3 +1,4 @@
+
 <div class="collapsible-views">
   <!-- map -->
   <div class="collapsible-map">
@@ -26,3 +27,6 @@
     </div>
   </div>
 </div>
+<?php
+
+?>

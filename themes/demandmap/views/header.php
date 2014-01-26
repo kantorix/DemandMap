@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php echo $header_block; ?>
+  <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
   <?php
   // Action::header_scripts - Additional Inline Scripts from Plugins
   Event::run('ushahidi_action.header_scripts');
