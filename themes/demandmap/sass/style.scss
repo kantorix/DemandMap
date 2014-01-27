@@ -218,7 +218,7 @@ a:hover {
   margin: 36px 0 0 0;
   position: absolute;
   right: 0;
-  z-index: 100;
+  z-index: 1001;
   width: 288px;
 
   a {
@@ -290,8 +290,13 @@ a:hover {
  */
 
 .category-column {
+  margin-bottom: 1em;
   ul {
     margin: 0 0 0 1.5em;
+
+    label {
+      font-weight: normal !important;
+    }
   }
   .check-box {
     margin: 0 0.5em 0 0;
