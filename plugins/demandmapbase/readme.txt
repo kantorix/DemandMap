@@ -3,7 +3,7 @@ name: DemandMap Base
 website:
 description: Invokes some global hooks
 version: 0.1
-author: HTW
+author: #OSJUBA
 author website:
 
 == Description ==
