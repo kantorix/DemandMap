@@ -386,8 +386,9 @@ div.map {
 
 .region-content {
   .wrapper-inner {
+    background: #e7e1d3;
+
     .content-padding {
-      background: #e7e1d3;
       padding: 20px 45px;
     }
   }
@@ -396,6 +397,10 @@ div.map {
 /**
  * Frontpage columns
  */
+
+.frontpage-content-columns {
+  padding: 0 0 1em 0;
+}
 
 .frontpage-content-left {
   float: left;
