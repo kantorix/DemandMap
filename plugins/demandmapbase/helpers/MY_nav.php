@@ -22,7 +22,7 @@ class nav extends nav_Core {
     if (!in_array('reports', $dontshow)) {
       $menu_items[] = array(
         'page' => 'reports',
-        'url' => url::site('reports'),
+        'url' => url::site('reports/submit'),
         'name' => Kohana::lang('ui_main.requests')
       );
     }
@@ -45,7 +45,8 @@ class nav extends nav_Core {
     Event::run('ushahidi_filter.nav_main_tabs', $menu_items);
 
     foreach ($menu_items as $item) {
-      $active = ($this_page == $item['page']) ? ' class="active"' : '';
+      //$active = ($this_page == $item['page']) ? ' class="active"' : '';
+      $active = (substr($this_page, 0, strlen($item['page'])) === $item['page']) ? ' class="active"' : '';
       echo '<li><a href="' . $item['url'] . '"' . $active . '>' . $item['name'] . '</a></li>';
     }
 

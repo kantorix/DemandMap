@@ -1,7 +1,11 @@
+<?php
+$pageController = new Page_Controller();
+$pageController->index(7);
+print $pageController->template->content;
+?>
 <div class="region-content">
   <div class="wrapper-inner">
     <div class="content-padding report-submit">
-
       <?php if ($site_submit_report_message != ''): ?>
         <div class="green-box">
           <h3><?php echo $site_submit_report_message; ?></h3>
