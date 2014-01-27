@@ -1219,47 +1219,69 @@ div.map {
 }
 
 /**
+ * Frontpage columns
+ */
+/* line 400, ../sass/style.scss */
+.frontpage-content-left {
+  float: left;
+  width: 70%;
+}
+
+/* line 405, ../sass/style.scss */
+.frontpage-content-right {
+  float: left;
+  line-height: normal;
+  width: 30%;
+}
+
+/* line 411, ../sass/style.scss */
+#page-id-9 {
+  margin-top: 38px;
+  text-align: center;
+}
+
+/**
  * blocks
  */
-/* line 401, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .content-blocks #block-reports {
   float: left;
   width: 28%;
 }
-/* line 405, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .content-blocks #block-reports .content-block {
   padding-right: 10px;
 }
-/* line 409, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 .content-blocks #block-news {
   float: left;
   width: 42%;
 }
-/* line 413, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .content-blocks #block-news .content-block {
   padding: 0 5px;
 }
-/* line 417, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .content-blocks #block-social-media {
   float: left;
   width: 30%;
 }
-/* line 421, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
 .content-blocks #block-social-media .content-block {
   padding-left: 10px;
 }
 
-/* line 428, ../sass/style.scss */
+/* line 448, ../sass/style.scss */
 #block-reports .incident-identificator {
   display: inline-block;
   width: 25px;
 }
-/* line 432, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 #block-reports .incident-separator {
   margin-right: 5px;
 }
 
-/* line 437, ../sass/style.scss */
+/* line 457, ../sass/style.scss */
 .block-report-list, .block-news-list {
   font-size: 0.750em;
 }
@@ -1267,7 +1289,7 @@ div.map {
 /**
  * Report detail
  */
-/* line 445, ../sass/style.scss */
+/* line 465, ../sass/style.scss */
 h1, .report-detail h2, .content-blocks h5 {
   color: #7ba054;
   font-size: 1.125em;
@@ -1275,26 +1297,26 @@ h1, .report-detail h2, .content-blocks h5 {
   padding-bottom: 0.75em;
 }
 
-/* line 453, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .report-detail .report-category-list, .report-detail .report-metadata, .report-detail .report-description-text {
   margin: 0 0 1em 0;
 }
 
-/* line 461, ../sass/style.scss */
+/* line 481, ../sass/style.scss */
 .report-metadata {
   font-weight: bold;
 }
 
-/* line 465, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 .report-comments {
   margin: 2em 0;
 }
-/* line 467, ../sass/style.scss */
+/* line 487, ../sass/style.scss */
 .report-comments h2 {
   margin-bottom: 0.375em;
 }
 
-/* line 472, ../sass/style.scss */
+/* line 492, ../sass/style.scss */
 .report-comment-box {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1307,35 +1329,35 @@ h1, .report-detail h2, .content-blocks h5 {
   padding: 8px 9px;
 }
 
-/* line 480, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .comment-metadata {
   font-style: italic;
   font-size: 0.875em;
 }
 
-/* line 485, ../sass/style.scss */
+/* line 505, ../sass/style.scss */
 .comment-description {
   margin: 0.5em 0 0.5em;
 }
 
-/* line 492, ../sass/style.scss */
+/* line 512, ../sass/style.scss */
 #commentForm {
   font-size: 0.875em;
   margin: 1em 0 0 0;
 }
-/* line 496, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 #commentForm label {
   color: #7ba054;
   display: block;
   font-weight: bold;
 }
 
-/* line 503, ../sass/style.scss */
+/* line 523, ../sass/style.scss */
 .report_row {
   margin: 0 0 1em 0;
 }
 
-/* line 507, ../sass/style.scss */
+/* line 527, ../sass/style.scss */
 .error {
   color: #ca1b17 !important;
   font-weight: normal !important;
@@ -1344,18 +1366,18 @@ h1, .report-detail h2, .content-blocks h5 {
 /**
  * Submit incident
  */
-/* line 516, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 #reportForm {
   font-size: 0.875em;
   margin: 1em 0 0 0;
 }
-/* line 520, ../sass/style.scss */
+/* line 540, ../sass/style.scss */
 #reportForm label {
   color: #7ba054;
   display: block;
   font-weight: bold;
 }
-/* line 525, ../sass/style.scss */
+/* line 545, ../sass/style.scss */
 #reportForm .allowed-html {
   display: block;
   line-height: 1.3em;
@@ -1366,7 +1388,7 @@ h1, .report-detail h2, .content-blocks h5 {
 /**
  * user interface
  */
-/* line 537, ../sass/style.scss */
+/* line 557, ../sass/style.scss */
 .edit-link {
   font-size: 0.675em;
 }
@@ -1374,7 +1396,7 @@ h1, .report-detail h2, .content-blocks h5 {
 /**
  * Form generation
  */
-/* line 545, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .textarea, .text {
   border: 1px solid #f4f1ea;
   padding: 0 5px;
@@ -1383,12 +1405,12 @@ h1, .report-detail h2, .content-blocks h5 {
   width: 400px;
 }
 
-/* line 553, ../sass/style.scss */
+/* line 573, ../sass/style.scss */
 .textarea {
   height: 100px;
 }
 
-/* line 557, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .btn_green, .btn_submit {
   background: #7ba054;
   border: 0;
@@ -1402,7 +1424,7 @@ h1, .report-detail h2, .content-blocks h5 {
   font-weight: bold;
   padding: 8px 16px;
 }
-/* line 566, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .btn_green:hover, .btn_submit:hover {
   background: #94b572;
 }
@@ -1410,23 +1432,23 @@ h1, .report-detail h2, .content-blocks h5 {
 /**
  * Table list
  */
-/* line 575, ../sass/style.scss */
+/* line 595, ../sass/style.scss */
 .table-list {
   background: #fff;
   border-left: 1px solid #ac9f8c;
   border-top: 1px solid #ac9f8c;
 }
-/* line 580, ../sass/style.scss */
+/* line 600, ../sass/style.scss */
 .table-list tr.odd {
   background: #e9e9e9;
 }
-/* line 583, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 .table-list th, .table-list td {
   border-right: 1px solid #ac9f8c;
   border-bottom: 1px solid #ac9f8c;
   padding: 3px 8px;
 }
-/* line 588, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 .table-list th {
   background: #2d2b29;
   color: #fff;
@@ -1436,7 +1458,7 @@ h1, .report-detail h2, .content-blocks h5 {
 /**
  * Frontpage Buttons
  */
-/* line 599, ../sass/style.scss */
+/* line 619, ../sass/style.scss */
 .frontpage-button {
   border-bottom: 1px solid #d0cabc;
   float: left;
@@ -1445,7 +1467,7 @@ h1, .report-detail h2, .content-blocks h5 {
   text-align: center;
   width: 33.33333%;
 }
-/* line 607, ../sass/style.scss */
+/* line 627, ../sass/style.scss */
 .frontpage-button h3 {
   color: #948068;
   font-size: 1.75em;
@@ -1453,12 +1475,12 @@ h1, .report-detail h2, .content-blocks h5 {
   margin: 30px 0 15px 0;
   text-transform: uppercase;
 }
-/* line 614, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .frontpage-button a:hover {
   color: #7ba054;
 }
 
-/* line 619, ../sass/style.scss */
+/* line 639, ../sass/style.scss */
 .frontpage-buttons-inner {
   padding: 0 20px;
 }

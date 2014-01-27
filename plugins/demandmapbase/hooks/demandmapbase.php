@@ -14,8 +14,12 @@ class demandmapbase {
    * Adds all the events to the main Ushahidi application
    */
   public function add() {
-    Event::add('ushahidi_filter.get_incidents_sql', array($this, '_add_get_incidents_sql_filter'));
+    Event::add('ushahidi_filter.get_incidents_sql', array(
+      $this,
+      '_add_get_incidents_sql_filter'
+    ));
     Event::add('ushahidi_action.header_item', array($this, '_add_type_filter'));
+    Event::add('ushahidi_filter.page_title', array($this, '_modify_page_title'));
     $segments = Router::$segments;
     if ($segments[0] === 'reports' && $segments[1] === 'view') {
       return;
@@ -26,9 +30,14 @@ class demandmapbase {
     Event::add('ushahidi_filter.header_block', array($this, '_add_report_js'));
   }
 
+  function _modify_page_title() {
+    // Remove Frontpage Sidebar title
+    Event::$data = str_replace('Frontpage Sidebar Text', '', Event::$data);
+  }
+
   public function _add_report_js() {
     $view = new View('main/main_js');
-    Event::$data .= '<script type="text/javascript">'.$view->render().'</script>';
+    Event::$data .= '<script type="text/javascript">' . $view->render() . '</script>';
   }
 
   public function _add_get_incidents_sql_filter() {
@@ -42,11 +51,11 @@ class demandmapbase {
     $categoryController = new category_Core();
     $view = new View('main/type_filters');
     $view->categories = $categoryController->get_category_tree_data();
-    $view->render(true);
+    $view->render(TRUE);
 
     $view = new View('main/category_filters');
     $view->categories = $categoryController->get_category_tree_data();
-    $view->render(true);
+    $view->render(TRUE);
   }
 
 }

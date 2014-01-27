@@ -394,6 +394,26 @@ div.map {
 }
 
 /**
+ * Frontpage columns
+ */
+
+.frontpage-content-left {
+  float: left;
+  width: 70%;
+}
+
+.frontpage-content-right {
+  float: left;
+  line-height: normal;
+  width: 30%;
+}
+
+#page-id-9 {
+  margin-top: 38px;
+  text-align: center;
+}
+
+/**
  * blocks
  */
 
