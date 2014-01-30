@@ -237,7 +237,7 @@ class smsparse {
 	private function save_category($category)
 	{
 		$cat = ORM::factory("category")
-			->where("category_title", 'Test')
+			->where("category_title", 'Other')
 			->find();
 			
 			$id = $cat->id;
