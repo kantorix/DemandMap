@@ -38,7 +38,7 @@
           <div class="frontpage-buttons-inner">
             <a href="<?php print url::site('reports/submit'); ?>"><img src="/themes/demandmap/images/button-submit.png" alt=""></a>
 
-            <h3><a href="<?php print url::site('reports/submit'); ?>">Submit</a>
+            <h3><a href="<?php print url::site('reports/submit'); ?>">Requests</a>
             </h3>
 
             <p>Donec dignissim nibh sed velit rhoncus, sit amet aliquet nisl
