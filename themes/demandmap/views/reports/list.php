@@ -16,6 +16,9 @@
 <div class="r_cat_tooltip"><a href="#" class="r-3"></a></div>
 <div class="rb_list-and-map-box">
   <div id="rb_list-view">
+    <?php if ($incidents->count() == 0) { ?>
+      <div class="no-matchings"><p>No matchings found</p></div>
+    <?php } else { ?>
     <?php
     foreach ($incidents as $incident) {
       $incident_id = $incident->incident_id;
@@ -98,6 +101,7 @@
         ?>
         <span class="report-submissiontype"><?php print $submissionTypeIcon; ?></span>
       </div>
+    <?php } ?>
     <?php } ?>
   </div>
 </div>
