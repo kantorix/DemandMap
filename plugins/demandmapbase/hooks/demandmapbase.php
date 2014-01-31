@@ -6,6 +6,8 @@ class demandmapbase {
    * Registers the main event add method
    */
   public function __construct() {
+    // override items_per_page settings
+    Kohana::config_set('settings.items_per_page', '6');
     // Hook into routing
     Event::add('system.pre_controller', array($this, 'add'));
   }
@@ -18,12 +20,12 @@ class demandmapbase {
       $this,
       '_add_get_incidents_sql_filter'
     ));
-    Event::add('ushahidi_action.header_item', array($this, '_add_type_filter'));
     Event::add('ushahidi_filter.page_title', array($this, '_modify_page_title'));
     $segments = Router::$segments;
     if ($segments[0] === 'reports' && $segments[1] === 'view') {
       return;
     }
+    Event::add('ushahidi_action.header_item', array($this, '_add_type_filter'));
     if ($segments[0] === 'main' || empty($segments)) {
       return;
     }

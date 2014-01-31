@@ -304,6 +304,34 @@ a:hover {
 }
 
 /**
+ * Pagination
+ */
+
+.rb_nav-controls {
+  position: absolute;
+  bottom: -47px;
+  text-align: center;
+  z-index: 1000;
+  width: 100%;
+}
+
+ul.pager {
+  line-height: 42px;
+
+  li {
+    display: inline;
+    display: inline-block;
+    list-style: none;
+    padding: 0 2px 0 2px;
+
+    a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+/**
  * Map region
  */
 
@@ -335,16 +363,19 @@ div.map {
 }
 
 .collapsible-views {
-  overflow: hidden;
+}
+
+.collapsible-map {
 }
 
 .collapsible-list {
   display: none;
   background: #938069;
-  height: 350px;
 
   .list-view {
     padding: 14px 0 0 0;
+    position: relative;
+    height: 350px;
   }
   .rb_report {
     background: #e7e1d3;

@@ -3,9 +3,9 @@
 <script type="text/javascript">
 <?php } ?>
   $(function () {
-    markers = null;
+    var markers = null;
+    var category_id = '';
     function addMarkers(category_id) {
-      category_id = category_id || '';
       filter = '';
       markers = L.markerClusterGroup({
         maxClusterRadius: 40,
@@ -23,14 +23,14 @@
         }
       });
       if (category_id.length > 0) {
-        filter = '&by=catid&id=' + category_id;
+        filter = 'catid&id=' + category_id;
       }
-      if (filter.lengt > 0) {
-        filter = '&by=all';
+      if (filter.length == 0) {
+        filter = 'all';
       }
       $.ajax({
         dataType: 'json',
-        url: '/api?task=incidents' + filter,
+        url: '/api?task=incidents&by=' + filter,
         success: function (data) {
           $.each(data.payload.incidents, function (i, item) {
             var title = '<h3><a href="reports/view/' + item.incident.incidentid + '">' + item.incident.incidenttitle + '<a></h3>';
@@ -43,6 +43,13 @@
       map.addLayer(markers);
     };
 
+    function reloadList(category_id, page) {
+      if (category_id.length > 0) {
+        filter = category_id;
+      }
+      $('.list-view').load('/reports/fetch_reports?c=' + filter + '&page=' + page);
+    }
+
     var map = new L.Map('map', {
       center: new L.LatLng(7.253496050069552, 31.827392578125),
       zoom: 6,
@@ -51,14 +58,15 @@
     });
 
     // add markers to the map
-    addMarkers();
+    addMarkers(category_id);
 
-    $('#type_switch a').click(function(e) {
+    $('#type_switch a').live('click', function(e) {
       $('#type_switch a').removeClass('active');
       $(this).addClass('active');
       map.removeLayer(markers);
       category_id = $(this).attr('id').substr(4);
       addMarkers(category_id);
+      reloadList(category_id, 1);
       if (category_id != '') {
         $('.category_swich_cat').hide();
         $('#category_swich_cat_' + category_id).show();
@@ -68,12 +76,26 @@
       e.preventDefault();
     });
 
-    $('#category_switch a').click(function(e) {
+    $('#category_switch a').live('click', function(e) {
       $('#category_switch a').removeClass('active');
       $(this).addClass('active');
       map.removeLayer(markers);
       category_id = $(this).attr('id').substr(4);
       addMarkers(category_id);
+      reloadList(category_id, 1);
+      e.preventDefault();
+    });
+
+    // Pager Trigger
+    $('ul.pager a').live('click', function(e) {
+      page_id = $(this).html();
+      if (page_id.length < 1) {
+        page_id = 1;
+      }
+      if (category_id.length == 0) {
+        category_id = 'all';
+      }
+      reloadList(category_id, page_id);
       e.preventDefault();
     });
 
