@@ -42,6 +42,11 @@ $(function () {
     e.preventDefault();
   });
 
+  //Load colorbox
+  $('a.colorbox').colorbox({
+    maxHeight: '100%'
+  });
+
   L.Icon.Default.imagePath = '/themes/demandmap/images/leaflet';
   var styles = [
     {

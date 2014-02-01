@@ -4,6 +4,7 @@
 @import "leaflet";
 @import "markercluster";
 @import "markercluster.default";
+@import "colorbox";
 
 /* Base styles */
 
@@ -220,7 +221,6 @@ a:hover {
   right: 0;
   z-index: 1001;
   z-index: 100000;
-  width: 288px;
 
   a {
     color: #fff;
@@ -450,6 +450,11 @@ div.map {
   float: left;
   line-height: normal;
   width: 30%;
+
+  img {
+    @include border-radius(10px);
+    border: 1px solid #d0cabc;
+  }
 }
 
 #page-id-9 {
