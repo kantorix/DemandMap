@@ -18,11 +18,22 @@
           marker.bindPopup(title).openPopup();
           markers.addLayer(marker);
         });
-        var map = new L.Map('map', {
+        map = new L.Map('map', {
           center: new L.LatLng(latitude, longitude),
           zoom: 8,
           scrollWheelZoom: false,
-          layers: [googleLayer]
+          layers: [googleLayer],
+          fullscreenControl: true,
+			    fullscreenControlOptions: {
+            title: 'Toggle Fullscreen Mode'
+			    }
+        });
+        // detect fullscreen toggling and activate scrollwheel
+        map.on('enterFullscreen', function(){
+          map.scrollWheelZoom.enable();
+        });
+        map.on('exitFullscreen', function(){
+          map.scrollWheelZoom.disable();
         });
         map.addLayer(markers);
       }

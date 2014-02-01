@@ -54,8 +54,22 @@
       center: new L.LatLng(7.253496050069552, 31.827392578125),
       zoom: 6,
       scrollWheelZoom: false,
-      layers: [googleLayer]
+      layers: [googleLayer],
+      fullscreenControl: true,
+			fullscreenControlOptions: {
+        title: 'Toggle Fullscreen Mode'
+			}
     });
+
+    // detect fullscreen toggling and activate scrollwheel
+		map.on('enterFullscreen', function(){
+			map.scrollWheelZoom.enable();
+		  $('#region-category-filter').appendTo('.map-fullwidth');
+		});
+		map.on('exitFullscreen', function(){
+      map.scrollWheelZoom.disable();
+      $('#region-category-filter').insertAfter('#region-filter');
+		});
 
     // add markers to the map
     addMarkers(category_id);
