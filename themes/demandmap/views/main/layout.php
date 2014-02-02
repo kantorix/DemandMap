@@ -25,36 +25,22 @@
         <div class="frontpage-button frontpage-button-about">
           <div class="frontpage-buttons-inner">
             <a href="<?php print url::site('page/index/2'); ?>"><img src="/themes/demandmap/images/button-about.png" alt=""></a>
-
-            <h3><a href="<?php print url::site('page/index/2'); ?>">About</a>
-            </h3>
-
-            <p>Donec dignissim nibh sed velit rhoncus, sit amet aliquet nisl
-              tincidunt. Aliquam adipiscing urna vel dolor porttitor, quis
-              vulputate risus sagittis.</p>
+            <h3><a href="<?php print url::site('page/index/2'); ?>">About</a></h3>
+            <p>Curious about who we are and what we do? Read all about us here!</p>
           </div>
         </div>
         <div class="frontpage-button frontpage-button-submit">
           <div class="frontpage-buttons-inner">
             <a href="<?php print url::site('reports/submit'); ?>"><img src="/themes/demandmap/images/button-submit.png" alt=""></a>
-
-            <h3><a href="<?php print url::site('reports/submit'); ?>">Requests</a>
-            </h3>
-
-            <p>Donec dignissim nibh sed velit rhoncus, sit amet aliquet nisl
-              tincidunt. Aliquam adipiscing urna vel dolor porttitor, quis
-              vulputate risus sagittis.</p>
+            <h3><a href="<?php print url::site('reports/submit'); ?>">Requests</a></h3>
+            <p>Send us your own request by submitting here!</p>
           </div>
         </div>
         <div class="frontpage-button frontpage-button-resources">
           <div class="frontpage-buttons-inner">
             <a href="<?php print url::site('resources'); ?>"><img src="/themes/demandmap/images/button-resources.png" alt=""></a>
-
             <h3><a href="<?php print url::site('resources'); ?>">Resources</a></h3>
-
-            <p>Donec dignissim nibh sed velit rhoncus, sit amet aliquet nisl
-              tincidunt. Aliquam adipiscing urna vel dolor porttitor, quis
-              vulputate risus sagittis.</p>
+            <p>Want to find out more about current happenings in South Sudan?<br> Browse through our resources!</p>
           </div>
         </div>
       </div>
