@@ -1912,4 +1912,63 @@ h1, .report-detail h2, .content-blocks h5 {
   text-align: center;
 }
 
+/**
+ * Resources
+ */
+/* line 764, ../sass/style.scss */
+.resources-list {
+  margin: 1em 0 0 0;
+  width: 70%;
+}
+/* line 768, ../sass/style.scss */
+.resources-list .resources-item {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 1px dashed #d0cabc;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+}
+/* line 774, ../sass/style.scss */
+.resources-list h3 {
+  color: #7ba054;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+/* line 780, ../sass/style.scss */
+.resources-list .action-line {
+  font-size: 0.813em;
+  margin: 0.75em 0 0 0;
+}
+/* line 785, ../sass/style.scss */
+.resources-list .action-line .commentcount a {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #d0cabc;
+  padding: 0.25em 0.5em;
+}
+/* line 792, ../sass/style.scss */
+.resources-list .action-line .readmore {
+  margin: 0 0 0 0.5em;
+}
+/* line 794, ../sass/style.scss */
+.resources-list .action-line .readmore a {
+  background: #7ba054;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #d0cabc;
+  color: #ffffff;
+  padding: 0.25em 0.5em;
+}
+
 /*@ sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
- 
+
 class Resources_Controller extends Main_Controller {
-    
+
 	const INDEX_PAGE = 'index.php/resource';
 
 	public function __construct()
@@ -9,10 +9,10 @@ class Resources_Controller extends Main_Controller {
 		parent::__construct();
 		$this->session = Session::instance();
 	}
-	
+
     public function index() {
 	if ($this->session->get('user_message')){
-		
+
 	}
 		$resources = ORM::factory('material')->find_all();
 		$topics = ORM::factory('topic')->find_all();
@@ -21,49 +21,49 @@ class Resources_Controller extends Main_Controller {
 		$this->template->content->resources = $resources;
 		$this->template->content->topics = $topics;
     }
- 
+
     // loads the new resource form
     public function submit() {
 	    $db = new Database();
 		$this->template->content = new View('resources/edit');
         $material = new Material_Model();
 		$topic = new Topic_Model();
-		$topics = ORM::factory('topic')->find_all(); 
-		$referencearray = array();		
+		$topics = ORM::factory('topic')->find_all();
+		$referencearray = array();
 		$this->template->content->topic = $topic;
 		$this->template->content->topics = $topics;
-        $this->template->content->material = $material;	
+        $this->template->content->material = $material;
 		$this->template->content->referencearray = $referencearray;
     }
-	
+
  // edit the resource
     public function edit($material_id=0) {
         $db = new Database();
 		$this->template->content = new View('resources/edit');
         $material = new Material_Model();
-		$topic = new Topic_Model();		
-		$material = ORM::factory('material', $material_id); 
+		$topic = new Topic_Model();
+		$material = ORM::factory('material', $material_id);
 		$topics = ORM::factory('topic')->find_all();
 		$referencearray = array();
 		foreach ($material->topics as $reference){
 			$referencearray[] = $reference->id;
-		}		
+		}
 		$this->template->content->material = $material;
 		$this->template->content->topic = $topic;
-		$this->template->content->topics = $topics;        
+		$this->template->content->topics = $topics;
 		$this->template->content->referencearray = $referencearray;
     }
-	
+
 	public function upload($id=0) {
 		$this->template->content = new View('resources/upload');
 		$this->template->content->material_id = $id;
-		
+
 	}
-	
-	
+
+
 	public function getfile($material_id=0) {
 		$full_name = time()."_".$_FILES['uploadFile'] ['name'];
-		move_uploaded_file ($_FILES['uploadFile'] ['tmp_name'], 
+		move_uploaded_file ($_FILES['uploadFile'] ['tmp_name'],
 		   DOCROOT."media/uploads/{$full_name}");
 		//$this->template->content = new View('resources/getfile');
 		$db = new Database();
@@ -73,11 +73,11 @@ class Resources_Controller extends Main_Controller {
 		$file->filetitle = $_FILES['uploadFile'] ['name'];
 		$file->filename = $full_name;
 		$file->create_date = date("y-m-d H:i:s");
-		$file->save();		
+		$file->save();
 		$this->session->set_flash('user_message', 'Hello, how are you?');
 		url::redirect(url::site().'resources');
 	}
-	
+
     // delete the resource
     public function delete($material_id=0) {
 		$db = new Database();
@@ -94,15 +94,15 @@ class Resources_Controller extends Main_Controller {
 				$file->delete();
 		}
 		$material->save();//needed
-		$material->delete();	
+		$material->delete();
 		url::redirect(url::site().'resources');
     }
-     
+
     // save the resource
     public function post($id=0) {
         $db = new Database();
         $material = new Material_Model();
-		$material_id =$id;		
+		$material_id =$id;
         $material = ORM::factory('material', $material_id);
 		if ($_POST){
 			$material->title = $_POST['title'];
@@ -117,39 +117,39 @@ class Resources_Controller extends Main_Controller {
 					$material->add(ORM::factory('topic', $selected_topic));
 				}
 			}
-			
+
 			$material->save();
-			//var_dump(count($material->topics()));			
+			//var_dump(count($material->topics()));
 			url::redirect(url::site().'resources');
 		}else{
-			
+
 		}
     }
-	
+
 	//loads the view with the commentssection below
 	 public function view($material_id=0) {
 		$db = new Database();
 		$this->template->content = new View('resources/view');
         $material = new Material_Model();
-		$talk = new Talk_Model();		
-		$material = ORM::factory('material', $material_id); 		
+		$talk = new Talk_Model();
+		$material = ORM::factory('material', $material_id);
 		foreach ($material->talks as $talk)
 		{
 			$talkarray[] = $talk->id;
 		}
-		$this->template->content->material = $material;        
+		$this->template->content->material = $material;
 		if ($_POST){
 			$talk->material_id = $material->id;
 			$talk->nickname = $_POST['nickname'];
 			$talk->email = $_POST['email'];
 			$talk->description = $_POST['comment'];
 			$talk->create_date = date("y-m-d H:i:s");
-			$talk->save();		
+			$talk->save();
 			url::redirect(url::site().'resources/view/'.$material->id);
 		}else{
-			
+
 		}
 	}
-	
-	
+
+
 }

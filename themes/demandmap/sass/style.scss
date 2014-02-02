@@ -756,3 +756,48 @@ h1, .content-blocks h5 {
     text-align: center;
   }
 }
+
+/**
+ * Resources
+ */
+
+.resources-list {
+  margin: 1em 0 0 0;
+  width: 70%;
+
+  .resources-item {
+    @include border-radius(5px);
+    border-bottom: 1px dashed #d0cabc;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+  }
+  h3 {
+    color: $headlineColor;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .action-line {
+    font-size: 0.813em;
+    margin: 0.75em 0 0 0;
+
+    .commentcount {
+      a {
+        background: #fff;
+        @include border-radius(5px);
+        border: 1px solid #d0cabc;
+        padding: 0.25em 0.5em;
+      }
+    }
+    .readmore {
+      margin: 0 0 0 0.5em;
+      a {
+        background: $headlineColor;
+        @include border-radius(5px);
+        border: 1px solid #d0cabc;
+        color: #ffffff;
+        padding: 0.25em 0.5em;
+      }
+    }
+  }
+}

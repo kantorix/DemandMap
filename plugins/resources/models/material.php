@@ -1,5 +1,5 @@
 <?php defined('SYSPATH') or die('No direct script access.');
- 
+
 class Material_Model extends ORM {
 	/**
 	 * Database table name
@@ -7,7 +7,7 @@ class Material_Model extends ORM {
 	 */
 	protected $table_name = 'materials';
 	protected $_primary_key = 'id';
-	
+
 	/**
 	 * one-to-many relationship definition
 	 * @var array

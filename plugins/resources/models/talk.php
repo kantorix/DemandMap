@@ -7,6 +7,6 @@ class Talk_Model extends ORM {
 	 */
 	protected $table_name = 'talks';
 	protected $_primary_key = 'id';
-	
+
 	//protected $belongs_to = array('material');
 }
