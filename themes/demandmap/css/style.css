@@ -1833,4 +1833,82 @@ h1, .report-detail h2, .content-blocks h5 {
   padding: 0 20px;
 }
 
+/**
+ * Page content
+ */
+/* line 696, ../sass/style.scss */
+.page_text {
+  overflow: hidden;
+}
+/* line 699, ../sass/style.scss */
+.page_text p {
+  margin: 0 0 1.5em;
+}
+/* line 702, ../sass/style.scss */
+.page_text p + ul, .page_text p + ol {
+  margin-top: -0.5em;
+}
+/* line 705, ../sass/style.scss */
+.page_text li ul, .page_text li ol {
+  margin: 0 1.5em;
+}
+/* line 709, ../sass/style.scss */
+.page_text ul, .page_text ol {
+  margin: 0 1.5em 1.5em 1.5em;
+}
+/* line 713, ../sass/style.scss */
+.page_text ul {
+  list-style-type: disc;
+}
+/* line 717, ../sass/style.scss */
+.page_text ol {
+  list-style-type: decimal;
+}
+/* line 721, ../sass/style.scss */
+.page_text ol ol {
+  list-style: upper-alpha;
+}
+/* line 725, ../sass/style.scss */
+.page_text ol ol ol {
+  list-style: lower-roman;
+}
+/* line 729, ../sass/style.scss */
+.page_text ol ol ol ol {
+  list-style: lower-alpha;
+}
+
+/* line 734, ../sass/style.scss */
+.sidebar-right {
+  float: right;
+  margin: 0 0 0 90px;
+}
+/* line 738, ../sass/style.scss */
+.sidebar-right h2 {
+  color: #7ba054;
+  font-size: 0.875em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+/* line 744, ../sass/style.scss */
+.sidebar-right iframe {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 750, ../sass/style.scss */
+#page-id-1 .sidebar-right {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #d0cabc;
+  padding: 5px 10px;
+  text-align: center;
+}
+
 /*@ sourceMappingURL=style.css.map */

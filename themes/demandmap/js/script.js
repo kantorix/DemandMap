@@ -47,6 +47,9 @@ $(function () {
     maxHeight: '100%'
   });
 
+  // equal heights
+  $('#frontpage-buttons').equalize({children: '.frontpage-buttons-inner'});
+
   L.Icon.Default.imagePath = '/themes/demandmap/images/leaflet';
   var styles = [
     {

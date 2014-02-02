@@ -16,20 +16,35 @@ class demandmapbase {
    * Adds all the events to the main Ushahidi application
    */
   public function add() {
+    // modify category filter, to support sublevels and parents
     Event::add('ushahidi_filter.get_incidents_sql', array(
       $this,
       '_add_get_incidents_sql_filter'
     ));
+    // change the page title
     Event::add('ushahidi_filter.page_title', array($this, '_modify_page_title'));
     $segments = Router::$segments;
     if ($segments[0] === 'reports' && $segments[1] === 'view') {
       return;
     }
+    Event::add('ushahidi_action.page_extra', array($this, '_add_page_extra'));
+    // add the filters to main template
     Event::add('ushahidi_action.header_item', array($this, '_add_type_filter'));
     if ($segments[0] === 'main' || empty($segments)) {
       return;
     }
+    // add main_js to every page
     Event::add('ushahidi_filter.header_block', array($this, '_add_report_js'));
+  }
+
+  function _add_page_extra() {
+    if (Event::$data == 1) {
+      // add instructions video
+      print '<div class="sidebar-right">
+      <h2>Watch our instructions video!</h2>
+      <iframe src="//player.vimeo.com/video/6284199?title=0&amp;byline=0&amp;portrait=0" width="268" height="162" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>';
+    }
   }
 
   function _modify_page_title() {
