@@ -1,5 +1,5 @@
 <h1>Resources</h1>
-<?php echo HTML::anchor("resources/submit", "+ New Resource"); ?>
+<?php echo HTML::anchor("resources/submit#resource-submit", "+ New Resource"); ?>
 <div class="resources-list">
   <?php foreach ($resources as $material) : ?>
     <?php
@@ -11,8 +11,8 @@
 
       <div class="material-content"><?php echo $material->content; ?></div>
       <div class="action-line">
-        <span class="commentcount"><?php echo HTML::anchor("resources/view/" . $material->id, $commentCount . ' comments'); ?></span>
-        <span class="readmore"><?php echo HTML::anchor("resources/view/" . $material->id, 'Read more'); ?></span>
+        <span class="commentcount"><?php echo HTML::anchor("resources/view/" . $material->id . "#resource-comments", $commentCount . ' comments'); ?></span>
+        <span class="readmore"><?php echo HTML::anchor("resources/view/" . $material->id . "#resource-detail", 'Read more'); ?></span>
       </div>
     </div>
   <?php endforeach; ?>

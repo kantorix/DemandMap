@@ -1,54 +1,54 @@
-<h1>Resource: <?php echo $material->title; ?> </h1>
-<br/>
-<h2>Categories</h2>
-<?php foreach ($material->topics as $reference) : ?>
-  <?php echo $reference->title; ?></br>
-<?php endforeach; ?>
-<br/>
+<?php
+$categories = array();
+foreach ($material->topics as $reference) {
+  echo $categories[] = $reference->title;
+}
+?>
+<div class="resource-detail" id="resource-detail">
+  <h1>Resource: <?php echo $material->title; ?> </h1>
+  <?php if (!empty($categories)) : ?>
+    <h2>Categories: <?php print implode(', ', $categories); ?></h2>
+  <?php endif; ?>
+  <div class="resource-description"><?php echo nl2br($material->content); ?></div>
 
-<h2>Description</h2>
-<?php echo $material->content; ?>
-<br/>
-<br/>
+  <div class="comment-block report-comments" id="resource-comments">
+    <h2>Comments</h2>
+    <?php if ($material->talks->count() > 0) : ?>
+      <?php foreach ($material->talks as $talk) : ?>
+        <div class="report-comment-box">
+          <div class="comment-metadata">
+            <?php echo date('M j Y', strtotime($talk->create_date)); ?>
+            <?php
+            if (!empty($talk->nickname)) {
+              print ' written by ' . $talk->nickname;
+            }
+            ?>
+          </div>
+          <div class="comment-description"><?php echo nl2br(html::escape($talk->description)); ?></div>
+        </div>
+      <?php endforeach; ?>
+    <?php else : ?>
+      <p><strong>No comments. Be the first to add a comment.</strong></p>
+    <?php endif; ?>
+  </div>
 
-<h2>Files</h2>
-<?php foreach ($material->files as $file) : ?>
-  </br>
-  <?php
-  $full_path = url::convert_uploaded_to_abs($file->filename);
-  echo '<a href="' . $full_path . '" target="_blank" >' . $file->filetitle . '</a><br>';?>
-  <br/>
-<?php endforeach; ?>
-<br/>
-<br/>
+  <h2>Write a new comment:</h2>
 
-<h3>Comment this:</h3>
-<?php echo Form::open('resources/view/' . $material->id); ?>
-<br/>
-<?php echo Form::label("nickname", "Nickname"); ?>
-<?php echo Form::input("nickname", ""); ?>
-<br/>
-<br/>
-<?php echo Form::label("email", "Email"); ?>
-<?php echo Form::input("email", ""); ?>
-<br/>
-<br/>
-<?php echo Form::label("comment", "Comment"); ?>
-<br/>
-<?php echo Form::textarea("comment", ""); ?>
-<br/>
-<?php echo Form::submit("submit", "Submit Comment"); ?>
-<?php echo Form::close(); ?>
-<br/>
-
-<h3>Comments</h3>
-<?php foreach ($material->talks as $talk) : ?>
-  </br>
-  <h4>
-    At <?php echo $talk->create_date; ?>
-    <?php echo $talk->nickname; ?> wrote:
-  </h4>
-  </br>
-  <?php echo $talk->description; ?>
-  </br>
-<?php endforeach; ?>
+  <div id="commentForm">
+    <?php echo Form::open('resources/view/' . $material->id); ?>
+    <?php echo Form::label("nickname", "Nickname"); ?>
+    <?php echo Form::input("nickname", "", ' class="text"'); ?>
+    <br/>
+    <br/>
+    <?php echo Form::label("email", "Email"); ?>
+    <?php echo Form::input("email", "", ' class="text"'); ?>
+    <br/>
+    <br/>
+    <?php echo Form::label("comment", "Comment *"); ?>
+    <?php echo Form::textarea("comment", "", ' class="textarea"'); ?>
+    <br/>
+    <?php echo Form::submit("submit", "Submit Comment", ' class="btn_submit"'); ?>
+    <?php echo Form::close(); ?>
+    <br/>
+  </div>
+</div>
