@@ -33,7 +33,7 @@
         url: '/api?task=incidents&by=' + filter,
         success: function (data) {
           $.each(data.payload.incidents, function (i, item) {
-            var title = '<h3><a href="reports/view/' + item.incident.incidentid + '">' + item.incident.incidenttitle + '<a></h3>';
+            var title = '<h3><a href="/reports/view/' + item.incident.incidentid + '">' + item.incident.incidenttitle + '<a></h3>';
             var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), { title: title });
             marker.bindPopup(title);
             markers.addLayer(marker);
