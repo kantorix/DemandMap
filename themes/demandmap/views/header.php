@@ -81,3 +81,6 @@ Event::run('ushahidi_action.header_item');
 $div_map = new View('main/map');
 print $div_map;
 ?>
+<div class="region-content">
+  <div class="wrapper-inner">
+    <div class="content-padding">
