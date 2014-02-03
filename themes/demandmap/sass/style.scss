@@ -857,3 +857,24 @@ h2 + #commentForm {
     list-style-type: disc;
   }
 }
+
+/**
+ * User Navbar
+ */
+
+#header_nav {
+  font-size: 0.875em;
+}
+
+#header_nav_left {
+  line-height: 30px;
+}
+
+#header_nav_right {
+  li.header_nav_user {
+    a {
+      display: block;
+      padding: 0.25em 0.75em;
+    }
+  }
+}

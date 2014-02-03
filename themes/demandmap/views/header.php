@@ -33,6 +33,13 @@ elseif (count($uri_segments) >= 2) {
 ?>
 <body id="page" class="<?php echo $body_class; ?>">
 
+<?php
+$auth = Auth::instance();
+if ($auth->logged_in()) {
+  print $header_nav;
+}
+?>
+
 <!-- top bar-->
 <div id="region-top" class="clearfix">
   <div class="wrapper-inner">

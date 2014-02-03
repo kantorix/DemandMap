@@ -2031,4 +2031,23 @@ h2 + #commentForm {
   list-style-type: disc;
 }
 
+/**
+ * User Navbar
+ */
+/* line 865, ../sass/style.scss */
+#header_nav {
+  font-size: 0.875em;
+}
+
+/* line 869, ../sass/style.scss */
+#header_nav_left {
+  line-height: 30px;
+}
+
+/* line 875, ../sass/style.scss */
+#header_nav_right li.header_nav_user a {
+  display: block;
+  padding: 0.25em 0.75em;
+}
+
 /*@ sourceMappingURL=style.css.map */
