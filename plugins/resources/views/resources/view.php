@@ -33,8 +33,7 @@
       <h3>Error!</h3>
       <ul>
         <?php
-        foreach ($errors as $error_item => $error_description)
-        {
+        foreach ($errors as $error_item => $error_description) {
           print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
         }
         ?>
@@ -44,15 +43,15 @@
   <div id="commentForm">
     <?php echo Form::open('resources/view/' . $material->id); ?>
     <?php echo Form::label("nickname", "Nickname"); ?>
-    <?php echo Form::input("nickname", "", ' class="text"'); ?>
+    <?php echo Form::input("nickname", $form['nickname'], ' class="text"'); ?>
     <br/>
     <br/>
     <?php echo Form::label("email", "Email"); ?>
-    <?php echo Form::input("email", "", ' class="text"'); ?>
+    <?php echo Form::input("email", $form['email'], ' class="text"'); ?>
     <br/>
     <br/>
-    <?php echo Form::label("comment", "Comment *"); ?>
-    <?php echo Form::textarea("comment", "", ' class="textarea"'); ?>
+    <?php echo Form::label("description", "Comment *"); ?>
+    <?php echo Form::textarea("description", $form['description'], ' class="textarea"'); ?>
     <br/>
     <?php echo Form::submit("submit", "Submit Comment", ' class="btn_submit"'); ?>
     <?php echo Form::close(); ?>
