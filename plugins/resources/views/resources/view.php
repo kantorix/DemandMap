@@ -1,13 +1,7 @@
-<?php
-$categories = array();
-foreach ($material->topics as $reference) {
-  echo $categories[] = $reference->title;
-}
-?>
 <div class="resource-detail" id="resource-detail">
   <h1>Resource: <?php echo $material->title; ?> </h1>
-  <?php if (!empty($categories)) : ?>
-    <h2>Categories: <?php print implode(', ', $categories); ?></h2>
+  <?php if (!empty($category->category_title)) : ?>
+    <h2>Category: <?php print $category->category_title; ?></h2>
   <?php endif; ?>
   <div class="resource-description"><?php echo nl2br($material->content); ?></div>
 
@@ -33,7 +27,20 @@ foreach ($material->topics as $reference) {
   </div>
 
   <h2>Write a new comment:</h2>
-
+  <?php if ($form_error): ?>
+    <!-- red-box -->
+    <div class="red-box">
+      <h3>Error!</h3>
+      <ul>
+        <?php
+        foreach ($errors as $error_item => $error_description)
+        {
+          print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
+        }
+        ?>
+      </ul>
+    </div>
+  <?php endif; ?>
   <div id="commentForm">
     <?php echo Form::open('resources/view/' . $material->id); ?>
     <?php echo Form::label("nickname", "Nickname"); ?>
