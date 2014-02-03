@@ -785,6 +785,13 @@ h2 + #commentForm {
     font-weight: bold;
     padding-bottom: 5px;
   }
+  .material-category {
+    color: $textColor;
+    font-size: 0.813em;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0.75em 0 0 0;
+  }
   .action-line {
     font-size: 0.813em;
     margin: 0.75em 0 0 0;
@@ -816,5 +823,12 @@ h2 + #commentForm {
     font-size: 1.0em;
     font-weight: bold;
     padding-bottom: 5px;
+  }
+  .material-category {
+    color: $textColor;
+    font-size: 0.875em;
+    font-style: italic;
+    font-weight: normal;
+    margin: -0.75em 0 0.75em 0;
   }
 }

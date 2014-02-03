@@ -1949,11 +1949,19 @@ h2 + #commentForm {
   padding-bottom: 5px;
 }
 /* line 788, ../sass/style.scss */
+.resources-list .material-category {
+  color: #938069;
+  font-size: 0.813em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0.75em 0 0 0;
+}
+/* line 795, ../sass/style.scss */
 .resources-list .action-line {
   font-size: 0.813em;
   margin: 0.75em 0 0 0;
 }
-/* line 793, ../sass/style.scss */
+/* line 800, ../sass/style.scss */
 .resources-list .action-line .commentcount a {
   background: #fff;
   -webkit-border-radius: 5px;
@@ -1964,11 +1972,11 @@ h2 + #commentForm {
   border: 1px solid #d0cabc;
   padding: 0.25em 0.75em;
 }
-/* line 800, ../sass/style.scss */
+/* line 807, ../sass/style.scss */
 .resources-list .action-line .readmore {
   margin: 0 0 0 0.5em;
 }
-/* line 802, ../sass/style.scss */
+/* line 809, ../sass/style.scss */
 .resources-list .action-line .readmore a {
   background: #7ba054;
   -webkit-border-radius: 5px;
@@ -1981,12 +1989,20 @@ h2 + #commentForm {
   padding: 0.25em 0.75em;
 }
 
-/* line 814, ../sass/style.scss */
+/* line 821, ../sass/style.scss */
 .resource-detail h2 {
   color: #7ba054;
   font-size: 1.0em;
   font-weight: bold;
   padding-bottom: 5px;
+}
+/* line 827, ../sass/style.scss */
+.resource-detail .material-category {
+  color: #938069;
+  font-size: 0.875em;
+  font-style: italic;
+  font-weight: normal;
+  margin: -0.75em 0 0.75em 0;
 }
 
 /*@ sourceMappingURL=style.css.map */

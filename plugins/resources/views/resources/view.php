@@ -1,7 +1,7 @@
 <div class="resource-detail" id="resource-detail">
   <h1>Resource: <?php echo $material->title; ?> </h1>
   <?php if (!empty($category->category_title)) : ?>
-    <h2>Category: <?php print $category->category_title; ?></h2>
+    <h2 class="material-category">Category: <?php print $category->category_title; ?></h2>
   <?php endif; ?>
   <div class="resource-description"><?php echo nl2br($material->content); ?></div>
 
