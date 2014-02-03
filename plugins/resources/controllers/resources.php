@@ -54,8 +54,8 @@ class Resources_Controller extends Main_Controller {
     $form_error = FALSE;
     $material = ORM::factory('material', $material_id);
     $category = ORM::factory('category', $material->category_id);
-    foreach ($material->talks as $talk) {
-      $talkarray[] = $talk->id;
+    foreach ($material->talks as $talk_m) {
+      $talkarray[] = $talk_m->id;
     }
     $this->template->content->logged_in = $this->logged_in;
     $this->template->content->form = $form;
