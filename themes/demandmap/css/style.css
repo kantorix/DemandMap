@@ -1842,65 +1842,66 @@ h2 + #commentForm {
 /* line 697, ../sass/style.scss */
 .frontpage-buttons-inner {
   padding: 0 20px;
+  min-height: 292px;
 }
 
 /**
  * Page content
  */
-/* line 705, ../sass/style.scss */
+/* line 706, ../sass/style.scss */
 .page_text {
   overflow: hidden;
 }
-/* line 708, ../sass/style.scss */
+/* line 709, ../sass/style.scss */
 .page_text p {
   margin: 0 0 1.5em;
 }
-/* line 711, ../sass/style.scss */
+/* line 712, ../sass/style.scss */
 .page_text p + ul, .page_text p + ol {
   margin-top: -0.5em;
 }
-/* line 714, ../sass/style.scss */
+/* line 715, ../sass/style.scss */
 .page_text li ul, .page_text li ol {
   margin: 0 1.5em;
 }
-/* line 718, ../sass/style.scss */
+/* line 719, ../sass/style.scss */
 .page_text ul, .page_text ol {
   margin: 0 1.5em 1.5em 1.5em;
 }
-/* line 722, ../sass/style.scss */
+/* line 723, ../sass/style.scss */
 .page_text ul {
   list-style-type: disc;
 }
-/* line 726, ../sass/style.scss */
+/* line 727, ../sass/style.scss */
 .page_text ol {
   list-style-type: decimal;
 }
-/* line 730, ../sass/style.scss */
+/* line 731, ../sass/style.scss */
 .page_text ol ol {
   list-style: upper-alpha;
 }
-/* line 734, ../sass/style.scss */
+/* line 735, ../sass/style.scss */
 .page_text ol ol ol {
   list-style: lower-roman;
 }
-/* line 738, ../sass/style.scss */
+/* line 739, ../sass/style.scss */
 .page_text ol ol ol ol {
   list-style: lower-alpha;
 }
 
-/* line 743, ../sass/style.scss */
+/* line 744, ../sass/style.scss */
 .sidebar-right {
   float: right;
   margin: 0 0 0 90px;
 }
-/* line 747, ../sass/style.scss */
+/* line 748, ../sass/style.scss */
 .sidebar-right h2 {
   color: #7ba054;
   font-size: 0.875em;
   font-weight: bold;
   padding-bottom: 5px;
 }
-/* line 753, ../sass/style.scss */
+/* line 754, ../sass/style.scss */
 .sidebar-right iframe {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1909,7 +1910,7 @@ h2 + #commentForm {
   border-radius: 5px;
 }
 
-/* line 759, ../sass/style.scss */
+/* line 760, ../sass/style.scss */
 #page-id-1 .sidebar-right {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1925,12 +1926,12 @@ h2 + #commentForm {
 /**
  * Resources
  */
-/* line 772, ../sass/style.scss */
+/* line 773, ../sass/style.scss */
 .resources-list {
   margin: 1em 0 0 0;
   width: 70%;
 }
-/* line 776, ../sass/style.scss */
+/* line 777, ../sass/style.scss */
 .resources-list .resources-item {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1941,14 +1942,14 @@ h2 + #commentForm {
   margin: 0 0 1em 0;
   padding: 0 0 1em 0;
 }
-/* line 782, ../sass/style.scss */
+/* line 783, ../sass/style.scss */
 .resources-list h3 {
   color: #7ba054;
   font-size: 1.25em;
   font-weight: bold;
   padding-bottom: 5px;
 }
-/* line 788, ../sass/style.scss */
+/* line 789, ../sass/style.scss */
 .resources-list .material-category {
   color: #938069;
   font-size: 0.813em;
@@ -1956,12 +1957,12 @@ h2 + #commentForm {
   font-weight: normal;
   margin: 0.75em 0 0 0;
 }
-/* line 795, ../sass/style.scss */
+/* line 796, ../sass/style.scss */
 .resources-list .action-line {
   font-size: 0.813em;
   margin: 0.75em 0 0 0;
 }
-/* line 800, ../sass/style.scss */
+/* line 801, ../sass/style.scss */
 .resources-list .action-line .commentcount a {
   background: #fff;
   -webkit-border-radius: 5px;
@@ -1972,11 +1973,11 @@ h2 + #commentForm {
   border: 1px solid #d0cabc;
   padding: 0.25em 0.75em;
 }
-/* line 807, ../sass/style.scss */
+/* line 808, ../sass/style.scss */
 .resources-list .action-line .readmore {
   margin: 0 0 0 0.5em;
 }
-/* line 809, ../sass/style.scss */
+/* line 810, ../sass/style.scss */
 .resources-list .action-line .readmore a {
   background: #7ba054;
   -webkit-border-radius: 5px;
@@ -1989,14 +1990,14 @@ h2 + #commentForm {
   padding: 0.25em 0.75em;
 }
 
-/* line 821, ../sass/style.scss */
+/* line 822, ../sass/style.scss */
 .resource-detail h2 {
   color: #7ba054;
   font-size: 1.0em;
   font-weight: bold;
   padding-bottom: 5px;
 }
-/* line 827, ../sass/style.scss */
+/* line 828, ../sass/style.scss */
 .resource-detail .material-category {
   color: #938069;
   font-size: 0.875em;
