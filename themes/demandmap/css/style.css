@@ -2008,4 +2008,25 @@ h2 + #commentForm {
   margin: -0.75em 0 0.75em 0;
 }
 
+/**
+ * Errors
+ */
+/* line 843, ../sass/style.scss */
+.red-box {
+  border: 1px dashed #ed541d;
+  background-color: #fef5f1;
+  color: #8c2e0b;
+  padding: 0.75em 1em;
+}
+/* line 849, ../sass/style.scss */
+.red-box h3 {
+  color: #8c2e0b;
+  font-weight: bold;
+}
+/* line 853, ../sass/style.scss */
+.red-box ul, .red-box ol {
+  margin: 0.175em 0 0 1.1em;
+  list-style-type: disc;
+}
+
 /*@ sourceMappingURL=style.css.map */

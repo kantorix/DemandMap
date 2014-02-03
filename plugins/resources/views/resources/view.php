@@ -34,6 +34,17 @@
       <ul>
         <?php
         foreach ($errors as $error_item => $error_description) {
+          switch ($error_description) {
+            case 'talk.nickname.required':
+              $error_description = 'Your nickname is required.';
+              break;
+            case 'talk.email.required':
+              $error_description = 'Your email is required.';
+              break;
+            case 'talk.description.required':
+              $error_description = 'The description is required.';
+              break;
+          }
           print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
         }
         ?>
