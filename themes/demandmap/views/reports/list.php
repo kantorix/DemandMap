@@ -59,19 +59,11 @@
           }
         }
       }
-      // person phone icon
-      $submissionTypeIcon = '';
-      $submissionType = 'desktop';
-      $persons = ORM::Factory('incident_person')->where('incident_id', $incident_id)->find_all();
-      foreach ($persons as $person) {
-        if (!empty($person->person_phone)) {
-          $submissionType = 'mobile';
-        }
-      }
-      switch ($submissionType) {
-        case 'mobile':
+      switch ($incident->incident_mode) {
+        case 2:
           $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-mobile.png" alt="">';
           break;
+        case 1:
         default:
           $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-desktop.png" alt="">';
           break;
