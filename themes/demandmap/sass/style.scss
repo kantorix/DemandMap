@@ -350,6 +350,8 @@ div.map {
   background: #2d2b29;
   height: 42px;
   line-height: 42px;
+  position: relative;
+  z-index: 1002;
 }
 
 #trigger-expand-map {
