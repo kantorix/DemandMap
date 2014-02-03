@@ -36,15 +36,6 @@
       $location_name = $incident->location_name;
       $incident_verified = $incident->incident_verified;
 
-      if ($incident_verified) {
-        $incident_verified = '<span class="r_verified">' . Kohana::lang('ui_main.verified') . '</span>';
-        $incident_verified_class = "verified";
-      }
-      else {
-        $incident_verified = '<span class="r_unverified">' . Kohana::lang('ui_main.unverified') . '</span>';
-        $incident_verified_class = "unverified";
-      }
-
       $comment_count = ORM::Factory('comment')
         ->where('incident_id', $incident_id)->count_all();
 
@@ -73,9 +64,6 @@
         <h3><a class="r_title" href="<?php echo $incident_url; ?>">
             <?php echo html::escape($incident_title); ?>
           </a>
-          <a href="<?php echo "$incident_url#discussion"; ?>" class="r_comments">
-            <?php echo $comment_count; ?></a>
-          <?php echo $incident_verified; ?>
         </h3>
 
         <p class="r_date r-3 bottom-cap"><?php echo $incident_date; ?></p>
