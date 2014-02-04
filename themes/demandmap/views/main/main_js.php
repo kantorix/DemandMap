@@ -60,6 +60,7 @@
         title: 'Toggle Fullscreen Mode'
 			}
     });
+    L.control.scale({imperial: false}).addTo(map);
 
     // detect fullscreen toggling and activate scrollwheel
 		map.on('enterFullscreen', function(){
