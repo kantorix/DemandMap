@@ -36,12 +36,12 @@ blockquote:before, blockquote:after {
 }
 
 /* line 35, ../sass/_reset.scss */
-em {
+em, i {
   font-style: italic;
 }
 
 /* line 39, ../sass/_reset.scss */
-strong {
+strong, b {
   font-weight: bold;
 }
 
