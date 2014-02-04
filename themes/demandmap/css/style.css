@@ -1735,7 +1735,7 @@ h2 + #commentForm {
 /* line 600, ../sass/style.scss */
 #reportForm {
   font-size: 0.875em;
-  margin: 1em 0 0 0;
+  margin: 0.5em 0 0 0;
 }
 /* line 604, ../sass/style.scss */
 #reportForm label {
@@ -2048,14 +2048,15 @@ h2 + #commentForm {
   border: 1px dashed #ed541d;
   background-color: #fef5f1;
   color: #8c2e0b;
+  margin: 0 0 1em 0;
   padding: 0.75em 1em;
 }
-/* line 875, ../sass/style.scss */
+/* line 876, ../sass/style.scss */
 .red-box h3 {
   color: #8c2e0b;
   font-weight: bold;
 }
-/* line 879, ../sass/style.scss */
+/* line 880, ../sass/style.scss */
 .red-box ul, .red-box ol {
   margin: 0.175em 0 0 1.1em;
   list-style-type: disc;
@@ -2064,20 +2065,25 @@ h2 + #commentForm {
 /**
  * User Navbar
  */
-/* line 889, ../sass/style.scss */
+/* line 890, ../sass/style.scss */
 #header_nav {
   font-size: 0.875em;
 }
 
-/* line 893, ../sass/style.scss */
+/* line 894, ../sass/style.scss */
 #header_nav_left {
   line-height: 30px;
 }
 
-/* line 899, ../sass/style.scss */
+/* line 900, ../sass/style.scss */
 #header_nav_right li.header_nav_user a {
   display: block;
   padding: 0.25em 0.75em;
+}
+
+/* line 907, ../sass/style.scss */
+.report-submit {
+  padding-right: 45px;
 }
 
 /*@ sourceMappingURL=style.css.map */

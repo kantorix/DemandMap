@@ -599,7 +599,7 @@ h2 + #commentForm {
 
 #reportForm {
   font-size: 0.875em;
-  margin: 1em 0 0 0;
+  margin: 0.5em 0 0 0;
 
   label {
     color: $headlineColor;
@@ -870,6 +870,7 @@ h2 + #commentForm {
   border: 1px dashed #ed541d;
   background-color: #fef5f1;
   color: #8c2e0b;
+  margin: 0 0 1em 0;
   padding: 0.75em 1em;
 
   h3 {
@@ -901,4 +902,8 @@ h2 + #commentForm {
       padding: 0.25em 0.75em;
     }
   }
+}
+
+.report-submit {
+  padding-right: 45px;
 }
