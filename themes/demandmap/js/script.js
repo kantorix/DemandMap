@@ -1,6 +1,7 @@
 $(function () {
   $('#region-category-filter-plus').click(function (e) {
     $('#region-category-filter-inner').animate({
+      fontSize: '1em',
       width: '242px'
     });
     $(this).hide();
@@ -9,6 +10,7 @@ $(function () {
   });
   $('#region-category-filter-minus').click(function (e) {
     $('#region-category-filter-inner').animate({
+      fontSize: '0',
       width: '0'
     });
     $(this).hide();

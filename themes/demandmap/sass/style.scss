@@ -13,6 +13,8 @@ html {
   font-size: 100% * ($base-font-size / 16px);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -215,6 +217,19 @@ a:hover {
  * Category filter
  */
 
+#category_switch {
+  ul {
+    font-size: 0.750em;
+    line-height: normal;
+    margin: 9px 0 9px 0;
+    list-style-type: none;
+
+    li {
+      padding: 2px 0 2px 0;
+    }
+  }
+}
+
 #region-category-filter {
   color: #fff;
   margin: 36px 0 0 0;
@@ -250,23 +265,13 @@ a:hover {
   }
 }
 
-#category_switch {
-  ul {
-    font-size: 0.750em;
-    line-height: normal;
-    margin: 9px 0 9px 0;
-    list-style-type: none;
-
-    li {
-      padding: 2px 0 2px 0;
-    }
-  }
-}
-
 #region-category-filter-inner {
   @include transparent(#000000, 0.80);
+  @include border-bottom-left-radius(10px);
   float: right;
+  font-size: 0;
   overflow: hidden;
+  position: relative;
   padding: 0 0 0 13px;
   width: 0;
 }
@@ -518,7 +523,7 @@ div.map {
 
 h1, .content-blocks h5 {
   color: $headlineColor;
-  font-size: 1.25em;
+  font-size: 1.375em;
   font-weight: bold;
   padding-bottom: 0.75em;
 }
@@ -710,6 +715,24 @@ h2 + #commentForm {
 .page_text {
   overflow: hidden;
 
+  a {
+    color: #fb8944;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h2 {
+    color: $headlineColor;
+    font-size: 1.0em;
+    font-weight: bold;
+    padding-bottom: 0.25em;
+  }
+  h3, h4, h5 {
+    font-size: 1.0em;
+    font-weight: bold;
+    padding-bottom: 0.25em;
+  }
   p {
     margin: 0 0 1.5em;
   }
