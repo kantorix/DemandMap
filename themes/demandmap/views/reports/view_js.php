@@ -14,7 +14,7 @@
           latitude = item.incident.locationlatitude;
           longitude = item.incident.locationlongitude;
           var title = '<h3> ' + item.incident.incidenttitle + '</h3>';
-          var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), { title: "test" });
+          var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), { title: title });
           marker.bindPopup(title).openPopup();
           markers.addLayer(marker);
         });
