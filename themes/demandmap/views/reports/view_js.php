@@ -13,8 +13,14 @@
         $.each(data.payload.incidents, function (i, item) {
           latitude = item.incident.locationlatitude;
           longitude = item.incident.locationlongitude;
+
+          // fix non geocoded incidents the easy way
+          // needs a check, when there is enough data (it might influence the significance of the map
+          if (latitude == null) latitude = defaultLatitude;
+          if (longitude == null) longitude = defaultLongitude;
+
           var title = '<h3> ' + item.incident.incidenttitle + '</h3>';
-          var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), { title: item.incident.incidenttitle });
+          var marker = L.marker(new L.LatLng(latitude, longitude), { title: item.incident.incidenttitle });
           marker.bindPopup(title).openPopup();
           markers.addLayer(marker);
         });

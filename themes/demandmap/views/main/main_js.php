@@ -33,6 +33,11 @@
         url: '/api?task=incidents&by=' + filter,
         success: function (data) {
           $.each(data.payload.incidents, function (i, item) {
+            // fix non geocoded incidents the easy way
+            // needs a check, when there is enough data (it might influence the significance of the map
+            if (item.incident.locationlatitude == null) item.incident.locationlatitude = defaultLatitude;
+            if (item.incident.locationlongitude == null) item.incident.locationlongitude = defaultLongitude;
+
             var title = '<h3><a href="/reports/view/' + item.incident.incidentid + '">' + item.incident.incidenttitle + '<a></h3>';
             var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), {icon: window['icon_cat'+ item.categories[0].category.id], title: item.incident.incidenttitle});
             marker.bindPopup(title);
@@ -51,7 +56,7 @@
     }
 
     var map = new L.Map('map', {
-      center: new L.LatLng(7.253496050069552, 31.827392578125),
+      center: new L.LatLng(defaultLatitude, defaultLongitude),
       zoom: 6,
       scrollWheelZoom: false,
       layers: [googleLayer],

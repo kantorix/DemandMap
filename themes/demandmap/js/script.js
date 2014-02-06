@@ -71,6 +71,10 @@ $(function () {
       styles: styles
     }
   });
+  // base coordinates
+  defaultLatitude = 7.253496050069552;
+  defaultLongitude = 31.827392578125;
+
   // icons
   icon_cat4 = L.icon({
     iconUrl: L.Icon.Default.imagePath + '/marker-icon.png'
