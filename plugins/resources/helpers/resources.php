@@ -27,7 +27,9 @@ class resources_Core {
       ->add_rules('title', 'required', 'length[3,255]')
       ->add_rules('content', 'required')
       ->add_rules('category_id', 'required')
-      ->add_rules('link', 'valid::url');
+      ->add_rules('link', 'valid::url')
+      ->add_rules('nickname', 'required', 'length[3,255]')
+      ->add_rules('email', 'required', 'valid::email', 'valid::email_domain');
 
     /*//XXX: Hack to validate for no checkboxes checked
     if ( ! isset($post->incident_category))

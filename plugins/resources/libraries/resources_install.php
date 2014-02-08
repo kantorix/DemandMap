@@ -31,6 +31,11 @@ class Resources_Install {
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   `content` text CHARACTER SET utf8,
+  `link` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `category_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `user_email` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `user_nickname` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0");
 

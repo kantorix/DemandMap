@@ -90,4 +90,4 @@ print $div_map;
 ?>
 <div class="region-content">
   <div class="wrapper-inner">
-    <div class="content-padding">
+    <div class="content-padding clearfix">

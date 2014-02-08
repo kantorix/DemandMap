@@ -798,9 +798,27 @@ h2 + #commentForm {
  * Resources
  */
 
+.resource-content-left {
+  float: left;
+  width: 70%;
+}
+
+.resource-content-right {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 40px;
+  width: 30%;
+}
+
+#resource-filter {
+  font-size: 0.875em;
+  .is-children {
+    margin: 0 0 0 1.5em;
+  }
+}
+
 .resources-list {
   margin: 1em 0 0 0;
-  width: 70%;
 
   .resources-item {
     @include border-radius(5px);
