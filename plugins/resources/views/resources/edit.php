@@ -1,62 +1,59 @@
-<?php defined('SYSPATH') or die('No direct script access.'); ?>
-
-  <h1>Upload new resource:</h1>
-<?php if ($form_error): ?>
-  <!-- red-box -->
-  <div class="red-box">
-    <h3>Error!</h3>
-    <ul>
-      <?php
-      foreach ($errors as $error_item => $error_description) {
-        print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
-      }
-      ?>
-    </ul>
+<div class="resource-submit" id="resource-submit">
+  <h1>Upload new resource</h1>
+  <?php if ($form_error): ?>
+    <!-- red-box -->
+    <div class="red-box">
+      <h3>Error!</h3>
+      <ul>
+        <?php
+        foreach ($errors as $error_item => $error_description) {
+          switch ($error_description) {
+            case 'resource.title.required':
+              $error_description = 'The resource title is required.';
+              break;
+            case 'resource.content.required':
+              $error_description = 'The content field is required.';
+              break;
+            case 'resource.nickname.required':
+              $error_description = 'Your nickname is required.';
+              break;
+            case 'resource.email.required':
+              $error_description = 'Please enter a valid email address.';
+              break;
+          }
+          print (!$error_description) ? '' : "<li>" . $error_description . "</li>";
+        }
+        ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+  <div id="commentForm">
+    <?php echo Form::open('resources/post/' . $material->id); ?>
+    <?php echo Form::label("nickname", "Nickname"); ?>
+    <?php echo Form::input("nickname", $form['nickname'], ' class="text"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("email", "Email"); ?>
+    <?php echo Form::input("email", $form['email'], ' class="text"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("link", "Link to Resource"); ?>
+    <?php echo Form::textarea("link", $form['link'], ' class="text"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("title", "Title"); ?>
+    <?php echo Form::input("title", $form['title'], ' class="text"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("content", "Description"); ?>
+    <?php echo Form::textarea("content", $form['content'], ' class="textarea"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("category", "Category"); ?>
+    <?php echo Form::dropdown("category_id", $categories_list, $form['category_id']); ?>
+    <br>
+    <br>
+    <?php echo Form::submit("submit", "Submit", ' class="btn_submit"'); ?>
+    <?php echo Form::close(); ?>
   </div>
-<?php endif; ?>
-<?php echo Form::open('resources/post/' . $material->id); ?>
-<?php echo Form::label("title", "Title"); ?>
-  <br/>
-<?php echo Form::input("title", $form['title']); ?>
-  <br/>
-  <br/>
-<?php echo Form::label("category", "Category"); ?>
-  <br/>
-<?php echo Form::dropdown("category_id", $categories_list, $form['category_id']); ?>
-  <!--<table>
-		<?php /*foreach ($topics as $topic) : ?>
-			<tr>
-			<td>
-				<?php echo Form::checkbox("topics[]", $topic->id,
-				(in_array($topic->id, $referencearray) ? TRUE : FALSE)//checks whether topicreferences to this material exist, so topics will then be checked
-				); ?>
-			</td>
-			<td>
-				<?php echo $topic->title; ?></td>
-			</tr>
-		<?php endforeach; */?>
-	</table>-->
-  <br/>
-  <br/>
-<?php echo Form::label("content", "Description"); ?>
-  <br/>
-<?php echo Form::textarea("content", $form['content']); ?>
-  <br/>
-  <br/>
-<?php echo Form::label("link", "Link to Resource"); ?>
-  <br/>
-<?php echo Form::textarea("link", $form['link']); ?>
-  <br/>
-  <br/>
-<?php echo Form::label("nickname", "Nickname"); ?>
-  <br/>
-<?php echo Form::input("nickname", $form['nickname']); ?>
-  <br/>
-  <br/>
-<?php echo Form::label("email", "Email"); ?>
-  <br/>
-<?php echo Form::input("email", $form['email']); ?>
-  <br/>
-  <br/>
-<?php echo Form::submit("submit", "Submit"); ?>
-<?php echo Form::close(); ?>
+</div>

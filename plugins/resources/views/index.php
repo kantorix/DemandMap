@@ -1,5 +1,9 @@
 <h1>Resources</h1>
 <div class="resource-content-left">
+  <p>South Sudan DemandMap aims to comply with the principles of Open Source by
+    making data and resources available, transparent, and accessible. This page
+    will gather Open Source resources that pertain to South Sudan in one
+    place.</p>
   <?php echo HTML::anchor("resources/submit#resource-submit", "+ New Resource"); ?>
   <div class="resources-list">
     <?php foreach ($resources as $material) : ?>
@@ -50,7 +54,10 @@
         </li>
       <?php endforeach; ?>
     </ul>
-    <?php echo Form::submit("filter", "Filter"); ?>
+    <div class="form-action">
+      <?php echo Form::submit("filter", "Filter", ' class="btn_green"'); ?>
+      <input type="reset" value="reset" class="btn_reset">
+    </div>
     <?php echo Form::close(); ?>
   </div>
 </div>

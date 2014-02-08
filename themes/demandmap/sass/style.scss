@@ -32,6 +32,10 @@ a:hover {
   text-decoration: underline;
 }
 
+p {
+  margin: 0 0 1.5em;
+}
+
 .clearfix {
   zoom: 1;
   &:before, &:after {
@@ -158,7 +162,7 @@ a:hover {
     color: #ffffff;
   }
   ul {
-    padding: 22px 0 0 0;
+    padding: 0;
     li {
       display: inline;
       margin: 0 0.15em;
@@ -174,13 +178,30 @@ a:hover {
   display: none;
 }
 
+.copyright {
+  float: right;
+  font-size: 0.875em;
+  padding: 22px 45px 0;
+}
+
+.disclaimer {
+  clear: both;
+  color: darken(#ffffff, 10%);
+  font-size: 0.688em;
+  line-height: 1.4em;
+  padding: 1em 45px 1em;
+  text-align: left;
+  width: 60%;
+}
+
 /**
  * Footer menu
  */
 
 #footermenu {
+  float: left;
   font-size: 0.875em;
-  text-align: center;
+  padding: 22px 45px 0;
 }
 
 /**
@@ -714,7 +735,6 @@ h2 + #commentForm {
  */
 
 .page_text {
-  overflow: hidden;
 
   a {
     color: #fb8944;
@@ -745,7 +765,13 @@ h2 + #commentForm {
   }
 
   ul, ol {
-    margin: 0 1.5em 1.5em 1.5em;
+    margin: 0 1.5em 1.5em 2em;
+  }
+
+  ul, ol {
+    ul, ol {
+      margin-left: 0.85em;
+    }
   }
 
   ul {
@@ -757,6 +783,7 @@ h2 + #commentForm {
   }
 
   ol ol {
+    margin-left: 1em;
     list-style: upper-alpha;
   }
 
@@ -814,6 +841,22 @@ h2 + #commentForm {
   font-size: 0.875em;
   .is-children {
     margin: 0 0 0 1.5em;
+  }
+  h2 {
+    color: $headlineColor;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .btn_green {
+    float: right;
+    margin-top: 1em;
+  }
+  .btn_reset {
+    @extend .btn_green;
+    background: lighten($headlineColor, 15%);
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
   }
 }
 

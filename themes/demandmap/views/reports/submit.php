@@ -9,6 +9,11 @@
 
       <h1><?php echo Kohana::lang('ui_main.reports_submit_new'); ?></h1>
 
+      <p><strong>Submit a New Report</strong><br>
+        Send a submission on our website by filling out the form below. We will process your request and display it on our map.
+      </p>
+      <p><strong>Alternatively?</strong><br>
+        Submit via SMS</p>
       <!-- start report form block -->
       <?php print form::open(NULL, array(
         'enctype' => 'multipart/form-data',

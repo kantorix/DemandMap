@@ -21,17 +21,17 @@
 
       <h3><a href="<?php print url::site('page/index/2'); ?>">About</a></h3>
 
-      <p>Curious about who we are and what we do? Read all about us here!</p>
+      <p>Read about DemandMap here</p>
     </div>
   </div>
   <div class="frontpage-button frontpage-button-submit">
     <div class="frontpage-buttons-inner">
       <a href="<?php print url::site('reports/submit'); ?>"><img src="/themes/demandmap/images/button-submit.png" alt=""></a>
 
-      <h3><a href="<?php print url::site('reports/submit'); ?>">Requests</a>
+      <h3><a href="<?php print url::site('reports/submit'); ?>">Submit</a>
       </h3>
 
-      <p>Send us your own request by submitting here!</p>
+      <p>Send us your own request by submitting here</p>
     </div>
   </div>
   <div class="frontpage-button frontpage-button-resources">
@@ -40,8 +40,7 @@
 
       <h3><a href="<?php print url::site('resources'); ?>">Resources</a></h3>
 
-      <p>Want to find out more about current happenings in South Sudan?<br>
-        Browse through our resources!</p>
+      <p>Browse through our Open-source resources</p>
     </div>
   </div>
 </div>
