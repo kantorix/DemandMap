@@ -437,10 +437,13 @@ div.map {
     position: relative;
     width: 332px;
 
+    a {
+      color: $green;
+    }
     h3 {
-      color: $headlineColor;
+      color: $green;
       font-weight: bold;
-      margin: 0 0 0.75em;
+      margin: 0 0 0.5em;
     }
     .r_date, .r_location {
       display: none;
