@@ -27,8 +27,8 @@
   ?>
   <div class="wrapper-inner">
     <div class="trigger-maplist">
-      <a href="#" id="trigger-map">Map view</a>
-      | <a href="#" id="trigger-list">List view</a>
+      <a href="#" id="trigger-map" class="active" title="Switch to Map view">Map view</a>
+      | <a href="#" id="trigger-list" title="Switch to List view">List view</a>
     </div>
     <div class="trigger-collapse">
       <a href="#" id="trigger-shrink-map">minimize</a>

@@ -1,16 +1,23 @@
+<?php
+$incident = ORM::factory('incident')
+  ->where('id', $incident_id)
+  ->where('incident_active',1)
+  ->find();
+switch ($incident->incident_mode) {
+  case 2:
+    $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-mobile.png" alt="">';
+    break;
+  case 1:
+  default:
+    $submissionTypeIcon = '<img src="/themes/demandmap/images/icon-desktop.png" alt="">';
+    break;
+}
+?>
 <div class="report-detail">
 
   <div class="left-col">
 
-    <?php
-    if ($incident_verified) {
-      echo '<p class="r_verified">' . Kohana::lang('ui_main.verified') . '</p>';
-    }
-    else {
-      echo '<p class="r_unverified">' . Kohana::lang('ui_main.unverified') . '</p>';
-    }
-    ?>
-
+    <div class="report-detail-mode"><?php print $submissionTypeIcon; ?></div>
     <h1 class="report-title"><?php
       echo html::escape($incident_title);
 
@@ -21,16 +28,17 @@
       }
       ?></h1>
 
+    <?php if (!empty($incident_date)) : ?>
+      <div class="report-date">submitted on <?php print $incident_date; ?> </div>
+    <?php endif; ?>
     <div class="report-metadata">
-      <span class="report-date"><?php echo $incident_time . ' | ' . $incident_date; ?> </span>
-      <span class="report-location"><?php echo html::specialchars($incident_location); ?></span><br/>
-      <?php Event::run('ushahidi_action.report_meta_after_time', $incident_id); ?>
-      <span class="report-send-by">sent from Desktop</span><br/>
-      <span class="report-resolved-state">request is resolved</span>
+      <?php if (!empty($incident_location)) : ?>
+      <div class="report-location"><strong>Location:</strong> <?php echo html::specialchars($incident_location); ?></div>
+      <?php endif; ?>
     </div>
 
-    <div class="report-category-list">
-      <p><strong>Tags:</strong>
+    <?php if (!empty($incident_category)) : ?>
+    <div class="report-category-list"><strong>Category:</strong>
         <?php
         $categories = array();
         foreach ($incident_category as $category) {
@@ -42,12 +50,12 @@
         }
         print implode(', ', $categories);
         ?>
-      </p>
       <?php
       // Action::report_meta - Add Items to the Report Meta (Location/Date/Time etc.)
       Event::run('ushahidi_action.report_meta', $incident_id);
       ?>
     </div>
+    <?php endif; ?>
 
     <?php
     // Action::report_display_media - Add content just above media section

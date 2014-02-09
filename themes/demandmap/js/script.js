@@ -34,11 +34,15 @@ $(function () {
     e.preventDefault();
   });
   $('#trigger-map').click(function (e) {
+    $('#trigger-list').removeClass('active');
+    $(this).addClass('active');
     $('.collapsible-list').hide();
     $('.collapsible-map').show();
     e.preventDefault();
   });
   $('#trigger-list').click(function (e) {
+    $('#trigger-map').removeClass('active');
+    $(this).addClass('active');
     $('.collapsible-list').show();
     $('.collapsible-map').hide();
     e.preventDefault();

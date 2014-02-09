@@ -395,6 +395,14 @@ div.map {
 
 .trigger-maplist {
   float: left;
+  font-size: 0.875em;
+  padding: 0 0 0 45px;
+
+  a.active {
+    color: $green;
+    font-weight: bold;
+    margin: 0 5px;
+  }
 }
 
 .trigger-collapse {
@@ -594,7 +602,7 @@ h1, .content-blocks h5 {
 }
 
 .report-detail {
-  .report-category-list, .report-metadata, .report-description-text {
+  .report-category-list, .report-description-text {
     margin: 0 0 1em 0;
   }
   h2 {
@@ -602,8 +610,16 @@ h1, .content-blocks h5 {
   }
 }
 
+.report-date {
+  font-size: 0.875em;
+  margin: -0.75em 0 1em;
+}
+
 .report-metadata {
-  font-weight: bold;
+}
+
+.report-detail-mode {
+  float: right;
 }
 
 .report-comments {
@@ -631,6 +647,7 @@ h1, .content-blocks h5 {
 }
 
 .comment-block {
+  margin: 2em 0 0 0;
 }
 
 #commentForm {
