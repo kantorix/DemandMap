@@ -44,6 +44,12 @@ $(function () {
     e.preventDefault();
   });
 
+  // reset filter
+  $('.btn_reset').click(function (e) {
+    $('#resource-filter-form').find('input, select').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+    $('#resource-filter-form').submit();
+  });
+
   //Load colorbox
   $('a.colorbox').colorbox({
     maxHeight: '100%'

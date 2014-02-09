@@ -17,7 +17,7 @@
 <div class="rb_list-and-map-box">
   <div id="rb_list-view">
     <?php if ($incidents->count() == 0) { ?>
-      <div class="no-matchings"><p>No matchings found</p></div>
+      <div class="no-matchings"><p>No matching results found</p></div>
     <?php } else { ?>
     <?php
     foreach ($incidents as $incident) {

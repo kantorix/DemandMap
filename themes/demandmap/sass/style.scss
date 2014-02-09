@@ -29,6 +29,7 @@ a {
 }
 
 a:hover {
+  color: $green;
   text-decoration: underline;
 }
 
@@ -489,6 +490,39 @@ div.map {
   }
 }
 
+/**
+ * Frontpage Buttons
+ */
+
+.frontpage-button {
+  border-bottom: 1px solid #d0cabc;
+  float: left;
+  font-size: 0.875em;
+  padding: 0 0 35px 0;
+  text-align: center;
+  width: 33.33333%;
+
+  h3 {
+    color: #948068;
+    font-size: 1.75em;
+    font-weight: normal;
+    margin: 30px 0 15px 0;
+    text-transform: uppercase;
+  }
+  a:hover {
+    color: $green;
+  }
+}
+
+#frontpage-buttons {
+  margin: 2em 0 2.5em;
+}
+
+.frontpage-buttons-inner {
+  padding: 0 20px;
+  min-height: 270px;
+}
+
 #page-id-9 {
   margin-top: 38px;
   text-align: center;
@@ -660,7 +694,7 @@ h2 + #commentForm {
 }
 
 .btn_green, .btn_submit {
-  background: $headlineColor;
+  background: $green;
   border: 0;
   cursor: pointer;
   @include border-radius(5px);
@@ -669,7 +703,7 @@ h2 + #commentForm {
   padding: 8px 16px;
 
   &:hover {
-    background: lighten($headlineColor, 10%);
+    background: lighten($green, 10%);
   }
 }
 
@@ -698,46 +732,13 @@ h2 + #commentForm {
 }
 
 /**
- * Frontpage Buttons
- */
-
-.frontpage-button {
-  border-bottom: 1px solid #d0cabc;
-  float: left;
-  font-size: 0.875em;
-  padding: 0 0 35px 0;
-  text-align: center;
-  width: 33.33333%;
-
-  h3 {
-    color: #948068;
-    font-size: 1.75em;
-    font-weight: normal;
-    margin: 30px 0 15px 0;
-    text-transform: uppercase;
-  }
-  a:hover {
-    color: $headlineColor;
-  }
-}
-
-#frontpage-buttons {
-  margin: 2em 0 2.5em;
-}
-
-.frontpage-buttons-inner {
-  padding: 0 20px;
-  min-height: 292px;
-}
-
-/**
  * Page content
  */
 
 .page_text {
 
   a {
-    color: #fb8944;
+    color: $green;
     text-decoration: underline;
   }
   a:hover {
@@ -770,7 +771,13 @@ h2 + #commentForm {
 
   ul, ol {
     ul, ol {
-      margin-left: 0.85em;
+      margin-left: 1.5em;
+    }
+  }
+
+  ul, ol {
+    p {
+      margin: 1em 0 1em 0;
     }
   }
 
@@ -780,19 +787,6 @@ h2 + #commentForm {
 
   ol {
     list-style-type: decimal;
-  }
-
-  ol ol {
-    margin-left: 1em;
-    list-style: upper-alpha;
-  }
-
-  ol ol ol {
-    list-style: lower-roman;
-  }
-
-  ol ol ol ol {
-    list-style: lower-alpha;
   }
 }
 
@@ -853,15 +847,25 @@ h2 + #commentForm {
   }
   .btn_reset {
     @extend .btn_green;
-    background: lighten($headlineColor, 15%);
+    background: lighten($green, 15%);
     float: left;
     margin-right: 1em;
     margin-top: 1em;
   }
 }
 
+.add-resource {
+  a {
+    @extend .btn_green;
+    font-size: 0.875em;
+  }
+  margin: 0 0 2em 0;
+}
+
 .resources-list {
-  margin: 1em 0 0 0;
+  border-top: 1px dashed #d0cabc;
+  margin: 0.75em 0 0 0;
+  padding: 1em 0 0 0;
 
   .resources-item {
     @include border-radius(5px);
@@ -897,7 +901,7 @@ h2 + #commentForm {
     .readmore {
       margin: 0 0 0 0.5em;
       a {
-        background: $headlineColor;
+        background: $green;
         @include border-radius(5px);
         border: 1px solid #d0cabc;
         color: #ffffff;

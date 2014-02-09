@@ -4,8 +4,10 @@
     making data and resources available, transparent, and accessible. This page
     will gather Open Source resources that pertain to South Sudan in one
     place.</p>
-  <?php echo HTML::anchor("resources/submit#resource-submit", "+ New Resource"); ?>
+
+  <div class="add-resource"><?php echo HTML::anchor("resources/submit#resource-submit", "+ Add a new resource"); ?></div>
   <div class="resources-list">
+    <?php if ($resources->count() > 0) : ?>
     <?php foreach ($resources as $material) : ?>
       <?php
       $commentCount = ORM::Factory('talk')->where('material_id', $material->id)
@@ -25,11 +27,14 @@
         </div>
       </div>
     <?php endforeach; ?>
+    <?php else : ?>
+      <div class="no-matchings"><p>No matching resources found.</p></div>
+    <?php endif; ?>
   </div>
 </div>
 <div class="resource-content-right">
   <div id="resource-filter">
-    <?php echo Form::open('resources/filter'); ?>
+    <?php echo Form::open('resources/filter', array('id' => 'resource-filter-form')); ?>
     <h2>Category Filter</h2>
     <ul>
       <?php foreach ($categories as $category) : ?>
