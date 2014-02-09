@@ -320,6 +320,12 @@ p {
 
 .category-column {
   margin-bottom: 1em;
+
+  label {
+    color: $headlineColor;
+    display: block;
+    font-weight: bold;
+  }
   ul {
     margin: 0 0 0 1.5em;
 
