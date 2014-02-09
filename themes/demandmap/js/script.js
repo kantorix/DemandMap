@@ -127,13 +127,13 @@ $(function () {
 
   // education
   icon_cat11 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-icon.png'
+    iconUrl: L.Icon.Default.imagePath + '/marker-cat-11.png'
   });
   icon_cat12 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-icon.png'
+    iconUrl: L.Icon.Default.imagePath + '/marker-cat-12.png'
   });
   icon_cat13 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-icon.png'
+    iconUrl: L.Icon.Default.imagePath + '/marker-cat-13.png'
   });
 
 });
