@@ -40,20 +40,20 @@ class smsparse {
 	public function parse()
 	{
 		
-		echo "parse";
+		// "parse";
 		// get sms data from Ushahidi and parse content
 		$sms = Event::$data; 
 		$data = $this->parse_contents($sms->message);
 		$incident = NULL;
-		
-		echo "parse contents";
+
+    // echo "parse contents";
 		
 		// reporter is created in Ushahidi SMS Core before the sms add event is invoked
 		$reporter = ORM::factory('reporter')
 		    ->where('service_account', $sms->message_from)
 		    ->find();
-			
-			echo "reporter";
+
+    // echo "reporter";
 			
 		// Registration sms, don't create incident
 		if ( in_array("reporter_type_id", array_keys($data)) )
@@ -95,15 +95,15 @@ class smsparse {
 			$data["active"] = 1;//active
 			$data["verified"] = 1;//$reporter->level_id >= 4 ? 1 : 0;// if reporter is not trusted, mark report as not verified
 			$incident = $this->create_new_incident($data, $sms->message_date);
-			
-			echo "incident";
+
+      //echo "incident";
 			
 			$incident_category = new Incident_Category_Model();
 			$incident_category->incident_id = $incident->id;
 			$incident_category->category_id = $data["category_id"];
 			$incident_category->save();
-			
-			echo "incident category";
+
+      //echo "incident category";
 		}
 		
 		
@@ -113,24 +113,24 @@ class smsparse {
 			// Update Message with Incident ID
 			$sms->incident_id = $incident->id;
 			$sms->save();
-			
-			echo "update incident";
+
+      //echo "update incident";
 			
 			// set reporter incident relation
 			$reporterIncident = new Reporters_Incidents_Model();
 			$reporterIncident->reporter_id = $reporter->id;
 			$reporterIncident->incident_id = $incident->id;
 			$reporterIncident->save();
-			
-			echo "reporters incidents";
+
+      //echo "reporters incidents";
 			
 			//@TODO:store incident type
 			$incidentType = new Incidents_Types_Model();
 			$reporterType = $this->get_reporter_type($reporter->id);
 			$incidentType->incident_id = $incident->id;
 			$incidentType->type_id = $reporterType->id;
-			
-			echo "incidents types";
+
+      //echo "incidents types";
 		}
 		
 		//TODO:How to handle multiple messages
