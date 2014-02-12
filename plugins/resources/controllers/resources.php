@@ -161,7 +161,7 @@ class Resources_Controller extends Main_Controller {
     );
     $this->template->content = new View('resources/edit');
     // Copy the form as errors, so the errors will be stored with keys corresponding to the form field names
-    $errors = $form;
+    $errors = array();
     $form_error = FALSE;
     $form_saved = ($saved == 'saved');
     $material = new Material_Model();
