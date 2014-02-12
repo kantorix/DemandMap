@@ -17,13 +17,6 @@
         <li>•</li>
         <li><a href="<?php echo url::site('page/index/8'); ?>"><?php echo Kohana::lang('ui_main.legal_notice'); ?></a></li>
         <?php
-        $auth = Auth::instance();
-        if (!$auth->logged_in()) {
-          ?>
-          <li>•</li>
-          <li><a href="<?php echo url::site('login'); ?>">Login</a></li>
-        <?php } ?>
-        <?php
         // Action::nav_main_bottom - Add items to the bottom links
         Event::run('ushahidi_action.nav_main_bottom');
         ?>
