@@ -53,9 +53,9 @@ if ($auth->logged_in()) {
       <!-- / searchform -->
     </div>
     <div id="block-sociallinks">
-      <a href="http://www.facebook.com" target="_blank">Facebook</a> |
-      <a href="http://www.twitter.com" target="_blank">Twitter</a> |
-      <a href="mailto:test@test.com" target="_blank">Mail</a>
+      <a href="https://www.facebook.com/demandmap" target="_blank">Facebook</a> |
+      <a href="https://twitter.com/DemandMap" target="_blank">Twitter</a> |
+      <a href="mailto:&#100;&#101;&#109;&#97;&#110;&#100;&#109;&#97;&#112;&#64;&#119;&#101;&#98;&#46;&#100;&#101;" target="_blank">Mail</a>
     </div>
   </div>
 </div>
