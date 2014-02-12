@@ -23,4 +23,6 @@ class Material_Model extends ORM {
    * @var array
    */
   protected $has_and_belongs_to_many = array('topics');
+
+  protected $sorting = array('id' => 'DESC');
 }
