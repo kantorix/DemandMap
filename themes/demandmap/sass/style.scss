@@ -163,7 +163,7 @@ p {
     color: #ffffff;
   }
   ul {
-    padding: 0;
+    padding: 22px 0 0 0;
     li {
       display: inline;
       margin: 0 0.15em;
@@ -179,30 +179,13 @@ p {
   display: none;
 }
 
-.copyright {
-  float: right;
-  font-size: 0.875em;
-  padding: 22px 45px 0;
-}
-
-.disclaimer {
-  clear: both;
-  color: darken(#ffffff, 10%);
-  font-size: 0.688em;
-  line-height: 1.4em;
-  padding: 1em 45px 1em;
-  text-align: left;
-  width: 60%;
-}
-
 /**
  * Footer menu
  */
 
 #footermenu {
-  float: left;
   font-size: 0.875em;
-  padding: 22px 45px 0;
+  text-align: center;
 }
 
 /**
@@ -493,13 +476,13 @@ div.map {
 
 .frontpage-content-left {
   float: left;
-  width: 70%;
+  width: 67%;
 }
 
 .frontpage-content-right {
   float: left;
   line-height: normal;
-  width: 30%;
+  width: 33%;
 
   img {
     @include border-radius(10px);
@@ -542,7 +525,7 @@ div.map {
 
 #page-id-9 {
   margin-top: 38px;
-  text-align: center;
+  text-align: right;
 }
 
 /**
@@ -599,6 +582,15 @@ h1, .content-blocks h5 {
   font-size: 1.375em;
   font-weight: bold;
   padding-bottom: 0.75em;
+}
+
+h1 {
+  margin: 0.5em 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #615342;
 }
 
 .report-detail {
@@ -765,13 +757,11 @@ h2 + #commentForm {
 
   a {
     color: $green;
-    text-decoration: underline;
   }
   a:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
   h2 {
-    color: $headlineColor;
     font-size: 1.0em;
     font-weight: bold;
     padding-bottom: 0.25em;

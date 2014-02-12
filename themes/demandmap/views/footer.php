@@ -1,5 +1,5 @@
-    </div>
-  </div>
+</div>
+</div>
 </div>
 <!-- / wrapper -->
 
@@ -19,26 +19,21 @@
         <?php
         $auth = Auth::instance();
         if (!$auth->logged_in()) {
-        ?>
-        <li>•</li>
-        <li><a href="<?php echo url::site('login'); ?>">Login</a></li>
+          ?>
+          <li>•</li>
+          <li><a href="<?php echo url::site('login'); ?>">Login</a></li>
         <?php } ?>
         <?php
         // Action::nav_main_bottom - Add items to the bottom links
         Event::run('ushahidi_action.nav_main_bottom');
         ?>
       </ul>
+      <?php if ($site_copyright_statement != ''): ?>
+        <p><?php echo $site_copyright_statement; ?></p>
+      <?php endif; ?>
     </div>
-    <?php if ($site_copyright_statement != ''): ?>
-      <p class="copyright"><?php echo $site_copyright_statement; ?></p>
-    <?php endif; ?>
     <!-- / footer menu -->
-    <div class="disclaimer">
-      <p><strong>*Disclaimers:</strong>
-        <br>South Sudan DemandMap claims no responsibility to the represented borders of the Google map data.
-      </p>
-      <p>The views and opinions expressed in the media, articles or comments on this community site are those of the speakers or authors and do not necessarily reflect or represent the views and opinions held by South Sudan DemandMap.</p>
-    </div>
+
     <!-- / footer content -->
   </div>
 </div>

@@ -21,7 +21,7 @@
 
       <h3><a href="<?php print url::site('page/index/2'); ?>">About</a></h3>
 
-      <p>Read about DemandMap here</p>
+      <p>Read about DemandMap</p>
     </div>
   </div>
   <div class="frontpage-button frontpage-button-submit">
@@ -31,7 +31,7 @@
       <h3><a href="<?php print url::site('reports/submit'); ?>">Submit</a>
       </h3>
 
-      <p>Send us your own request by submitting here</p>
+      <p>Send us your own request</p>
     </div>
   </div>
   <div class="frontpage-button frontpage-button-resources">
@@ -40,7 +40,7 @@
 
       <h3><a href="<?php print url::site('resources'); ?>">Resources</a></h3>
 
-      <p>Browse through our Open-source resources</p>
+      <p>Browse through our OpenSource resources</p>
     </div>
   </div>
 </div>

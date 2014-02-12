@@ -69,7 +69,7 @@ if ($auth->logged_in()) {
         <span><?php echo $site_tagline; ?></span>
       </div>
     <?php else: ?>
-      <a href="<?php echo url::site(); ?>"><img src="<?php echo $banner; ?>" alt="<?php echo $site_name; ?>" id="logo"></a>
+      <a href="<?php echo url::site(); ?>"><img src="/themes/demandmap/images/logo.png" alt="<?php echo $site_name; ?>" id="logo"></a>
     <?php endif; ?>
     <!-- / logo -->
 

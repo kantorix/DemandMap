@@ -2,8 +2,7 @@
 <div class="resource-content-left">
   <p>South Sudan DemandMap aims to comply with the principles of Open Source by
     making data and resources available, transparent, and accessible. This page
-    will gather Open Source resources that pertain to South Sudan in one
-    place.</p>
+    will gather Open Source resources that pertain to South Sudan.</p>
 
   <div class="add-resource"><?php echo HTML::anchor("resources/submit#resource-submit", "+ Add a new resource"); ?></div>
   <div class="resources-list">
