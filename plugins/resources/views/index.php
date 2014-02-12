@@ -42,6 +42,7 @@
     if (!empty($categories)) {
       print '<ul class="category-column-resources" id="category-column-1">';
       foreach ($categories as $category) :
+        if ($category->parent_id != 10) continue; // filter list to skilled labor request categories
         ?>
         <li>
           <label>
