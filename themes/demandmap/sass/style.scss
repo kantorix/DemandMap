@@ -142,6 +142,7 @@ p {
 
 #logo {
   @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
   float: left;
   padding: 5px 0 10px 60px;
   width: 35%;
@@ -149,6 +150,7 @@ p {
 
 #menu-mainmenu {
   @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
   float: left;
   font-size: 0.938em;
   line-height: 30px;
@@ -362,6 +364,7 @@ p {
   }
   .resource-checkbox {
     @include box-sizing(border-box);
+    -moz-box-sizing: border-box;
     float: left;
     padding: 0 5px 0 0;
     max-width: 20px;
@@ -931,7 +934,8 @@ h2 + #commentForm {
 }
 
 .resource-content-right {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
   float: left;
   padding-left: 40px;
   width: 30%;
@@ -940,6 +944,7 @@ h2 + #commentForm {
 @media all and (max-width: 800px) {
   .resource-content-left, .resource-content-right {
     @include box-sizing(border-box);
+    -moz-box-sizing: border-box;
     float: none;
     padding-left: 0;
     width: 100%;
