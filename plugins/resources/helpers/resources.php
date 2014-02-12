@@ -25,7 +25,6 @@ class resources_Core {
     $post = Validation::factory($post)
       ->pre_filter('trim', TRUE)
       ->add_rules('title', 'required', 'length[3,255]')
-      ->add_rules('content', 'required')
       ->add_rules('category_id', 'required')
       ->add_rules('link', 'valid::url')
       ->add_rules('nickname', 'required', 'length[3,255]')
