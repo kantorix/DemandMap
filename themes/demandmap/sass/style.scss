@@ -639,7 +639,7 @@ h2 {
 }
 
 .comment-block {
-  margin: 2em 0 0 0;
+  margin: 2em 0 2em 0;
 }
 
 #commentForm {
@@ -987,4 +987,8 @@ h2 + #commentForm {
 
 .report-submit {
   padding-right: 45px;
+}
+
+span.required {
+  color: darken(#ff0000, 10%);
 }

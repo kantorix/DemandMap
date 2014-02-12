@@ -29,19 +29,19 @@
   <?php endif; ?>
   <div id="commentForm">
     <?php echo Form::open('resources/post/' . $material->id); ?>
-    <?php echo Form::label("nickname", "Nickname"); ?>
+    <?php echo Form::label("nickname", 'Nickname <span class="required">*</span>'); ?>
     <?php echo Form::input("nickname", $form['nickname'], ' class="text"'); ?>
     <br>
     <br>
-    <?php echo Form::label("email", "Email"); ?>
+    <?php echo Form::label("email", 'Email <span class="required">*</span>'); ?>
     <?php echo Form::input("email", $form['email'], ' class="text"'); ?>
     <br>
     <br>
-    <?php echo Form::label("link", "Link to Resource"); ?>
+    <?php echo Form::label("link", 'Link to Resource <span class="required">*</span>'); ?>
     <?php echo Form::textarea("link", $form['link'], ' class="text"'); ?>
     <br>
     <br>
-    <?php echo Form::label("title", "Title"); ?>
+    <?php echo Form::label("title", 'Title <span class="required">*</span>'); ?>
     <?php echo Form::input("title", $form['title'], ' class="text"'); ?>
     <br>
     <br>
@@ -49,7 +49,7 @@
     <?php echo Form::textarea("content", $form['content'], ' class="textarea"'); ?>
     <br>
     <br>
-    <?php echo Form::label("category", "Category"); ?>
+    <?php echo Form::label("category", 'Category <span class="required">*</span>'); ?>
     <?php echo Form::dropdown("category_id", $categories_list, $form['category_id']); ?>
     <br>
     <br>

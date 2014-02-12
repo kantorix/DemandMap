@@ -1780,7 +1780,7 @@ h2 {
 
 /* line 641, ../sass/style.scss */
 .comment-block {
-  margin: 2em 0 0 0;
+  margin: 2em 0 2em 0;
 }
 
 /* line 645, ../sass/style.scss */
@@ -2171,6 +2171,11 @@ h2 + #commentForm {
 /* line 988, ../sass/style.scss */
 .report-submit {
   padding-right: 45px;
+}
+
+/* line 992, ../sass/style.scss */
+span.required {
+  color: #cc0000;
 }
 
 /*@ sourceMappingURL=style.css.map */
