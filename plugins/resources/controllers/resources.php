@@ -80,8 +80,12 @@ class Resources_Controller extends Main_Controller {
     $categories_list = array();
     $form_error = FALSE;
     foreach ($categories as $category) {
-      $categories_list[$category->id] = $category->category_title;
+      // Show only subcategories from skilled labour requests
+      if ($category->parent_id == 10) {
+        $categories_list[$category->id] = $category->category_title;
+      }
     }
+    asort($categories_list);
     /*
     $topic = new Topic_Model();
     $topics = ORM::factory('topic')->find_all();
@@ -202,7 +206,8 @@ class Resources_Controller extends Main_Controller {
         }
         */
         url::redirect(url::site() . 'resources/thanks');
-      } else {
+      }
+      else {
         // Repopulate the form fields
         $form = arr::overwrite($form, $post->as_array());
 

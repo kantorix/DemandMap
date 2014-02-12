@@ -337,6 +337,37 @@ p {
   }
 }
 
+.category-column-resources {
+  margin-bottom: 1em;
+
+  label {
+    color: $headlineColor;
+  }
+  ul {
+    margin: 0 0 0 1.5em;
+
+    label {
+      font-weight: normal !important;
+    }
+  }
+  li {
+    clear: both;
+    padding: 0 0 5px 0;
+  }
+  .resource-checkbox {
+    @include box-sizing(border-box);
+    float: left;
+    padding: 0 5px 0 0;
+    max-width: 20px;
+    width: 8%;
+  }
+  .resource-title {
+    float: left;
+    overflow: hidden;
+    width: 92%;
+  }
+}
+
 /**
  * Pagination
  */

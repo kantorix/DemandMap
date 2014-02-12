@@ -37,8 +37,22 @@
     <?php echo Form::open('resources/filter', array('id' => 'resource-filter-form')); ?>
     <h2>Category Filter</h2>
     <?php
+    Kohana::auto_load('Resourcecategory_Model');
     $selected_categories = (!empty($selected_category_ids) AND is_array($selected_category_ids)) ? $selected_categories = $selected_category_ids : array();
-    print category::form_tree('categories', $selected_categories, 2);
+    if (!empty($categories)) {
+      print '<ul class="category-column-resources" id="category-column-1">';
+      foreach ($categories as $category) :
+        ?>
+        <li>
+          <label>
+            <span class="resource-checkbox"><?php print Form::checkbox("categories[]", $category->id, (in_array($category->id, $selected_category_ids) ? TRUE : FALSE)); ?></span>
+            <span class="resource-title"><?php print $category->category_title; ?></span>
+          </label>
+        </li>
+      <?php
+      endforeach;
+      print '</ul>';
+    }
     ?>
     <div class="form-action">
       <?php echo Form::submit("filter", "Filter", ' class="btn_green"'); ?>
