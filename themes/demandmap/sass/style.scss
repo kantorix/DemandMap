@@ -56,6 +56,10 @@ p {
   }
 }
 
+.clear {
+  clear: both;
+}
+
 /* Classes */
 
 .wrapper-inner {
@@ -870,6 +874,25 @@ h2 + #commentForm {
 
   ol {
     list-style-type: decimal;
+  }
+
+  .sms-list {
+    margin-left: 0;
+    list-style: none;
+
+    .list-no-wrap {
+      float: left;
+      margin: 0 0 0 5px;
+    }
+
+    > li {
+      > p {
+        margin-left: 1.5em;
+      }
+      > ol {
+        margin-left: 2.8em;
+      }
+    }
   }
 }
 
