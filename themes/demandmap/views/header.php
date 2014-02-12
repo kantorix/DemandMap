@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <meta name="description" content="">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
   <?php echo $header_block; ?>
   <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
   <?php
@@ -69,7 +72,7 @@ if ($auth->logged_in()) {
         <span><?php echo $site_tagline; ?></span>
       </div>
     <?php else: ?>
-      <a href="<?php echo url::site(); ?>"><img src="/themes/demandmap/images/logo.png" alt="<?php echo $site_name; ?>" id="logo"></a>
+    <div id="logo"><a href="<?php echo url::site(); ?>"><img src="/themes/demandmap/images/logo.png" alt="<?php echo $site_name; ?>"></a></div>
     <?php endif; ?>
     <!-- / logo -->
 

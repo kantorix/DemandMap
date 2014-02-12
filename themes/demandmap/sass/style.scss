@@ -33,6 +33,12 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
 p {
   margin: 0 0 1.5em;
 }
@@ -82,16 +88,18 @@ p {
 
     input.text {
       @include border-left-radius(5px);
+      @include border-right-radius(0);
       border: 0;
       float: left;
       font-size: 0.750em;
       height: 22px;
       line-height: 22px;
       padding: 0 5px 0 5px;
-      width: 190px;
+      width: 59%;
     }
     input.searchbtn {
       background: url("/themes/demandmap/images/icon-search.png") no-repeat 50% 50% #fff;
+      @include border-left-radius(0);
       @include border-right-radius(5px);
       border: 0;
       color: #fff;
@@ -124,17 +132,25 @@ p {
  * Region header
  */
 
+#header {
+  position: relative;
+}
+
 #logo {
+  @include box-sizing(border-box);
   float: left;
-  margin: 5px 0 10px 60px;
+  padding: 5px 0 10px 60px;
+  width: 35%;
 }
 
 #menu-mainmenu {
+  @include box-sizing(border-box);
   float: left;
   font-size: 0.938em;
   line-height: 30px;
-  margin: 76px 0 0 22px;
+  padding: 7.6% 0 20px 22px;
   text-transform: uppercase;
+  width: 65%;
 
   li {
     float: left;
@@ -487,6 +503,24 @@ div.map {
   img {
     @include border-radius(10px);
     border: 1px solid #d0cabc;
+  }
+}
+
+#page-id-9 {
+  img {
+    margin: 0 30px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .frontpage-content-left, .frontpage-content-right {
+    float: none;
+    width: 100%;
+  }
+  .frontpage-content-right {
+    #page-id-9 {
+      text-align: center !important;
+    }
   }
 }
 
@@ -845,6 +879,18 @@ h2 + #commentForm {
   float: left;
   padding-left: 40px;
   width: 30%;
+}
+
+@media all and (max-width: 800px) {
+  .resource-content-left, .resource-content-right {
+    @include box-sizing(border-box);
+    float: none;
+    padding-left: 0;
+    width: 100%;
+  }
+  .resource-content-right {
+    max-width: 350px;
+  }
 }
 
 #resource-filter {
