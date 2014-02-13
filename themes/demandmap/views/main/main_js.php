@@ -39,7 +39,7 @@
             if (item.incident.locationlongitude == null) item.incident.locationlongitude = defaultLongitude;
 
             var title = '<h3><a href="/reports/view/' + item.incident.incidentid + '">' + item.incident.incidenttitle + '<a></h3>';
-            var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), {icon: window['icon_cat'+ item.categories[0].category.id], title: item.incident.incidenttitle});
+            var marker = L.marker(new L.LatLng(item.incident.locationlatitude, item.incident.locationlongitude), {icon: new LeafIcon({iconUrl: L.Icon.Default.imagePath + '/marker-cat-' + item.categories[0].category.id + '.png'}), title: item.incident.incidenttitle});
             marker.bindPopup(title);
             markers.addLayer(marker);
           });

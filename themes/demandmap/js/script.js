@@ -85,55 +85,12 @@ $(function () {
   defaultLatitude = 7.253496050069552;
   defaultLongitude = 31.827392578125;
 
-  // icons
-  icon_cat4 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-icon.png'
-  });
-
-  // skills
-  icon_cat14 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-14.png'
-  });
-  icon_cat15 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-15.png'
-  });
-  icon_cat16 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-16.png'
-  });
-  icon_cat17 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-17.png'
-  });
-  icon_cat18 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-18.png'
-  });
-  icon_cat19 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-19.png'
-  });
-  icon_cat20 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-20.png'
-  });
-  icon_cat21 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-21.png'
-  });
-  icon_cat22 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-22.png'
-  });
-  icon_cat23 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-23.png'
-  });
-  icon_cat24 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-24.png'
-  });
-
-  // education
-  icon_cat11 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-11.png'
-  });
-  icon_cat12 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-12.png'
-  });
-  icon_cat13 = L.icon({
-    iconUrl: L.Icon.Default.imagePath + '/marker-cat-13.png'
+  LeafIcon = L.Icon.extend({
+    options: {
+      iconSize:     [25, 41],
+      iconAnchor:   [12, 41],
+      popupAnchor:  [0, -41]
+    }
   });
 
 });
