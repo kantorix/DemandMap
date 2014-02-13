@@ -69,11 +69,13 @@
 
     // detect fullscreen toggling and activate scrollwheel
 		map.on('enterFullscreen', function(){
+		  map.setZoom(7, {animate: true});
 			map.scrollWheelZoom.enable();
 			$('.map-pager').hide();
 		  $('#region-category-filter').appendTo('.map-fullwidth');
 		});
 		map.on('exitFullscreen', function(){
+		  map.setZoom(6, {animate: true});
       map.scrollWheelZoom.disable();
       $('#region-category-filter').insertAfter('#region-filter');
       $('.map-pager').show();
