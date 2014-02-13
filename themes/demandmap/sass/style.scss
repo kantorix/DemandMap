@@ -828,6 +828,7 @@ h2 + #commentForm {
  */
 
 .page_text {
+  position: relative;
 
   a {
     color: $green;
@@ -1138,4 +1139,20 @@ span.required {
       color: $headlineColor;
     }
   }
+}
+
+/**
+ * Instructions
+ */
+
+.content-separator {
+  border-top: 1px solid #d0cabc;
+  margin: 1.5em 0 2em;
+}
+
+.icon-instructions-web, .icon-instructions-mobile {
+  margin: 0.5em 0 0 0;
+  position: absolute;
+  right: 0;
+  max-width: 162px;
 }
