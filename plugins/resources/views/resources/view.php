@@ -3,6 +3,9 @@
   <?php if (!empty($category->category_title)) : ?>
     <h2 class="material-category">Category: <?php print $category->category_title; ?></h2>
   <?php endif; ?>
+  <?php if (!empty($material->link)) : ?>
+  <div class="resource-link">Link to resource: <a href="<?php echo $material->link; ?>" target="_blank"><?php echo $material->link; ?></a></div>
+  <?php endif; ?>
   <div class="resource-description"><?php echo nl2br($material->content); ?></div>
 
   <div class="comment-block report-comments" id="resource-comments">

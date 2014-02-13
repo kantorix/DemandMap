@@ -1041,12 +1041,21 @@ h2 + #commentForm {
     font-weight: bold;
     padding-bottom: 5px;
   }
-  .material-category {
+  .material-category, .resource-link {
     color: $textColor;
     font-size: 0.875em;
     font-style: italic;
     font-weight: normal;
-    margin: -0.75em 0 0.75em 0;
+
+    a {
+      color: $green;
+    }
+  }
+  .material-category {
+    margin: -0.75em 0 0 0;
+  }
+  .resource-link {
+    margin: -0.5em 0 1.5em 0;
   }
 }
 

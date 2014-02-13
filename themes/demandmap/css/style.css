@@ -2254,18 +2254,29 @@ h2 + #commentForm {
   padding-bottom: 5px;
 }
 /* line 1044, ../sass/style.scss */
-.resource-detail .material-category {
+.resource-detail .material-category, .resource-detail .resource-link {
   color: #938069;
   font-size: 0.875em;
   font-style: italic;
   font-weight: normal;
-  margin: -0.75em 0 0.75em 0;
+}
+/* line 1050, ../sass/style.scss */
+.resource-detail .material-category a, .resource-detail .resource-link a {
+  color: #7ba054;
+}
+/* line 1054, ../sass/style.scss */
+.resource-detail .material-category {
+  margin: -0.75em 0 0 0;
+}
+/* line 1057, ../sass/style.scss */
+.resource-detail .resource-link {
+  margin: -0.5em 0 1.5em 0;
 }
 
 /**
  * Errors
  */
-/* line 1057, ../sass/style.scss */
+/* line 1066, ../sass/style.scss */
 .red-box {
   border: 1px dashed #ed541d;
   background-color: #fef5f1;
@@ -2273,12 +2284,12 @@ h2 + #commentForm {
   margin: 0 0 1em 0;
   padding: 0.75em 1em;
 }
-/* line 1064, ../sass/style.scss */
+/* line 1073, ../sass/style.scss */
 .red-box h3 {
   color: #8c2e0b;
   font-weight: bold;
 }
-/* line 1068, ../sass/style.scss */
+/* line 1077, ../sass/style.scss */
 .red-box ul, .red-box ol {
   margin: 0.175em 0 0 1.1em;
   list-style-type: disc;
@@ -2287,28 +2298,28 @@ h2 + #commentForm {
 /**
  * User Navbar
  */
-/* line 1078, ../sass/style.scss */
+/* line 1087, ../sass/style.scss */
 #header_nav {
   font-size: 0.875em;
 }
 
-/* line 1082, ../sass/style.scss */
+/* line 1091, ../sass/style.scss */
 #header_nav_left {
   line-height: 30px;
 }
 
-/* line 1088, ../sass/style.scss */
+/* line 1097, ../sass/style.scss */
 #header_nav_right li.header_nav_user a {
   display: block;
   padding: 0.25em 0.75em;
 }
 
-/* line 1095, ../sass/style.scss */
+/* line 1104, ../sass/style.scss */
 .report-submit {
   padding-right: 45px;
 }
 
-/* line 1099, ../sass/style.scss */
+/* line 1108, ../sass/style.scss */
 span.required {
   color: #cc0000;
 }
@@ -2316,31 +2327,31 @@ span.required {
 /**
  * Search results
  */
-/* line 1107, ../sass/style.scss */
+/* line 1116, ../sass/style.scss */
 .search_result {
   margin: 1em 0 0 0;
 }
-/* line 1109, ../sass/style.scss */
+/* line 1118, ../sass/style.scss */
 .search_result h3 {
   color: #46392b;
   font-weight: bold;
   font-size: 1.25em;
 }
-/* line 1114, ../sass/style.scss */
+/* line 1123, ../sass/style.scss */
 .search_result h3 a {
   color: #7ba054;
 }
-/* line 1118, ../sass/style.scss */
+/* line 1127, ../sass/style.scss */
 .search_result .search_date {
   display: none;
 }
 
-/* line 1124, ../sass/style.scss */
+/* line 1133, ../sass/style.scss */
 .search_block ul.pager {
   margin: 1.5em 0 0 0;
   text-align: center;
 }
-/* line 1128, ../sass/style.scss */
+/* line 1137, ../sass/style.scss */
 .search_block ul.pager .active {
   color: #46392b;
 }
