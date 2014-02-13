@@ -89,7 +89,9 @@ $(function () {
     options: {
       iconSize:     [25, 41],
       iconAnchor:   [12, 41],
-      popupAnchor:  [0, -41]
+      popupAnchor:  [0, -41],
+      shadowUrl: L.Icon.Default.imagePath + '/marker-shadow.png',
+      shadowSize: [41, 41]
     }
   });
 
