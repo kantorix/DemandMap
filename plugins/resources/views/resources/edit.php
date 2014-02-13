@@ -37,12 +37,12 @@
     <?php echo Form::input("email", $form['email'], ' class="text"'); ?>
     <br>
     <br>
-    <?php echo Form::label("link", 'Link to Resource <span class="required">*</span>'); ?>
-    <?php echo Form::textarea("link", $form['link'], ' class="text"'); ?>
-    <br>
-    <br>
     <?php echo Form::label("title", 'Title <span class="required">*</span>'); ?>
     <?php echo Form::input("title", $form['title'], ' class="text"'); ?>
+    <br>
+    <br>
+    <?php echo Form::label("link", 'Link to Resource <span class="required">*</span>'); ?>
+    <?php echo Form::textarea("link", $form['link'], ' class="text"'); ?>
     <br>
     <br>
     <?php echo Form::label("content", "Description"); ?>
