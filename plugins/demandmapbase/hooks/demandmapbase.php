@@ -27,7 +27,6 @@ class demandmapbase {
     if ($segments[0] === 'reports' && $segments[1] === 'view') {
       return;
     }
-    Event::add('ushahidi_action.page_extra', array($this, '_add_page_extra'));
     // add the filters to main template
     Event::add('ushahidi_action.header_item', array($this, '_add_type_filter'));
     if ($segments[0] === 'main' || empty($segments)) {
