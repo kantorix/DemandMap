@@ -64,6 +64,7 @@ class Resources_Controller extends Main_Controller {
 
   // loads the new resource form
   public function submit() {
+    $this->template->header->this_page = 'resources';
     $db = new Database();
     $form = array(
       'title' => '',
@@ -154,6 +155,7 @@ class Resources_Controller extends Main_Controller {
 
   // save the resource
   public function post($material_id = 0, $saved = FALSE) {
+    $this->template->this_page = 'resources';
     $db = new Database();
     $form = array(
       'title' => $_POST['title'],
@@ -224,6 +226,7 @@ class Resources_Controller extends Main_Controller {
    * Resources Thanks Page
    */
   public function thanks() {
+    $this->template->header->this_page = 'resources';
     $this->template->content = new View('resources/submit_thanks');
   }
 }
